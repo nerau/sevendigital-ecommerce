@@ -1,0 +1,71 @@
+// Typography
+$font-family-base: "Axia";
+$font-family-alternative: "Geom Graphic";
+$font-size: 16px;
+$font-weight-normal: normal;
+$line-height-base: 1.3;
+$body-color: #4A4A4A;
+
+$headings-font-family: $font-family-alternative;
+$headings-font-weight: bold;
+$headings-line-height: 1.1;
+$headings-margin-bottom: 0;
+
+$h1-font-size: 1rem * 3.75;
+$h2-font-size: 1rem * 3;
+$h3-font-size: 1rem * 2.125;
+$h4-font-size: 1rem * 1.5;
+$h5-font-size: 1rem * 1.875;
+$h6-font-size: 1rem;
+
+// Colors
+$blue:    #2BABEE;
+$indigo:  #6610f2;
+$purple:  #8268B1;
+$pink:    #FF5087;
+$red:     #dc3545;
+$orange:  #E16519;
+$yellow:  #FDB32B;
+$green:   #85CF39;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+$gray:    #979797;
+
+//Project colors
+$black: #000;
+$onyx: #121212;
+$dark-jungle-green: #1f1f1f;
+$papaya-whip: #fff2d4;
+$sunglow: #ffcd28;
+$safety-orange: #ff6d03;
+$sepia: #654e00;
+$rifle-green: #3e462f;
+$rifle-green-light: #CBC990;
+$wenge: #6a6951;
+$taupe-gray: #8c8c8c;
+$isabelline: #ebebeb;
+
+
+// Grids
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+// Containers
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1230px
+) !default;
+
+// Miscellaneous
+$easing: cubic-bezier(.91,.07,.41,.83);
+$custom-ease-out: cubic-bezier(.2,.03,0,1);
+

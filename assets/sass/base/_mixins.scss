@@ -1,0 +1,73 @@
+@function em($pixels, $context: $font-size) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return $pixels / $context * 1em;
+}
+
+@mixin placeholder {
+    &.placeholder { @content }
+    &:-moz-placeholder { @content }
+    &::-webkit-input-placeholder { @content }
+}
+
+@mixin gutter($size: 40) {
+	margin-left: em(-$size);
+	margin-right: em(-$size);
+	[class*="col-"] {
+		padding-left: em($size);
+		padding-right: em($size);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba($sunglow, 1);
+	}
+
+	100% {
+		box-shadow: 0 0 0 10px rgba($sunglow, 0);
+
+	}
+}
+
+%initials-all {
+	background-color: transparent;
+	background-image: none;
+	border-color: $body-color;
+	border-style: none;
+	border-width: medium;
+	clear: none;
+	color: $body-color;
+	display: inline;
+	float: none;
+	font-size: $font-size;
+	height: auto;
+	line-height: $line-height-base;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	max-height: none;
+	max-width: none;
+	min-height: 0;
+	min-width: 0;
+	overflow: visible;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	position: static;
+	text-align: initial;
+	text-decoration-color: currentcolor;
+	text-decoration-line: none;
+	text-decoration-style: solid;
+	text-indent: 0;
+	text-justify: auto;
+	width: auto;
+}

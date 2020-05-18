@@ -1,0 +1,83 @@
+<!-- As perguntas devem ser inseridas no hotsite conteúdo que será chamado dentro do container .js-content. Utilize o template a seguir: <faq pergunta="Os produtos possuem Nota Fiscal?" resposta="Sim. Todos os produtos são enviados com nota fiscal e garantia."></faq> -->
+
+<div class="page-faq">
+
+	<div class="faq-head">
+
+		<div class="container">
+
+			<p class="big-title">Está com dúvidas?</p>
+
+			<p class="small-title">Reunimos algumas informações que podem ser uteis.</p>
+
+			<div class="search-wrapper">
+
+				<div class="input-wrapper">
+					
+					<input type="text" id="faq-input" placeholder="Digite sua dúvida aqui">
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container">
+		
+		<section class="faq-content">	
+		</section>
+
+		<p class="no-result">Nenhum resultado foi encontrado</p>
+
+	</div>
+
+	<div class="js-content">
+
+        <FBITS:Conteudo filtroPosicao="centro" idsConteudos="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" />
+		
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	
+	$(function(){
+		if ($('faq').length > 0) {
+			$('faq').each(function(index){
+				var faqItemTag = $('<div class="faq-item">'),
+					pergunta = $('<div class="pergunta">').append($('<p>').append($(this).attr('pergunta'))),
+					resposta = $('<div class="resposta">').append($( '<p>').append($(this).attr('resposta')));
+				faqItemTag.append(pergunta);
+				faqItemTag.append(resposta);
+				$('.faq-content').append(faqItemTag);
+			})
+
+			$('.faq-item .pergunta').on('click', function(){
+				$(this).siblings('.resposta').stop().slideToggle();
+				$(this).parent().toggleClass('is-active');
+			})
+
+			$('.page-faq #faq-input').keyup(function () {
+
+				let val = $(this).val().toLowerCase();
+
+				$('.faq-item').find('.answer').stop().slideUp(400);
+				$('.faq-item').removeClass('is-active').hide();
+				$('.no-result').show();
+				$('.perguntas').slideUp();
+				$('.faq-item').each(function () {
+
+					let text = $(this).text().toLowerCase();
+					if (text.indexOf(val) != -1) {
+						$(this).show();
+						$('.no-result').hide();
+					}
+				});
+
+			});
+		}
+	})
+
+</script>
