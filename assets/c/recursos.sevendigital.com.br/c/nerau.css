@@ -16324,6 +16324,8 @@ button.close {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%; }
+    #html-root .fbits-carrinho .fbits-envio-container.loading {
+      display: none; }
   #html-root .fbits-carrinho .fbits-responsive-carrinho-item-total:before {
     display: none; }
   #html-root .fbits-carrinho .fbits-responsive-carrinho-item-total .text-nowrap:before {
