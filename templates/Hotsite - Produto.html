@@ -28,9 +28,15 @@
                     <!--Opções de escolha de atributos.-->
                     <FBITS:MatrizAtributos  />
                     <FBITS:EscolhaAtributos  />
+                    <div class="formas-pagamento-wrapper">
+                        
                     <!--Opções de parcelamento e frete.-->
-                    <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Boleto" ultimaParcela="true"/>
-                    <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Cartão" ultimaParcela="true"/>
+                        <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Boleto" ultimaParcela="true"/>
+                        <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Cartão" ultimaParcela="true"/>
+                        <div class="fancybox-content-parcelas">
+                            <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Cartão" classeItens="" />
+                        </div>
+                    </div>
                     <!--##Coluna 3.-->
                     <FBITS:ProdutoVariante  />
 

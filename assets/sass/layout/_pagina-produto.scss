@@ -28,6 +28,24 @@
 			padding-top: .5em;
 			padding-bottom: .5em;
 		}
+
+		.fancybox-content-parcelas {
+			opacity: 0;
+			pointer-events: none;
+			position: absolute;
+			visibility: hidden;
+
+			.details-content {
+				display: block !important;
+			}
+		}
+	}
+
+	.simular-parcela {
+		color: $blue-light;
+		font-size: 14px;
+		margin-left: .25em;
+		text-decoration: underline;
 	}
 
 	#btnEnviarAviseMe {

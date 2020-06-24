@@ -22038,6 +22038,8 @@ h1.price.end-values.__valor-total-simulado-nao-atacado {
   z-index: 1101;
   outline: none;
   display: none;
+  left: 50% !important;
+  transform:  translateX(-50%);
 }
 #fancybox-outer
 {

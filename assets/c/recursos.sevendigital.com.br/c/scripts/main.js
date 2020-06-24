@@ -339,8 +339,17 @@ var pageProduto = {
 		$('#txtCalculaFreteProduto').attr('placeholder', 'Informe seu CEP');
 		$('.btnCalculaFreteProduto').attr('value', 'Buscar');
 
+		//Cria simulador de parcelas
+		let cardParcelaRef = $('.detalhe-produto .formas-pagamento-wrapper > .fbits-parcelamento-padrao[data-componente-fbits-config*=Cartão]'),
+			toggleRef = $('<a href="javascript:;" class="simular-parcela">Simular parcelas</a>').on('click', function(e){
+				e.preventDefault();
+				$.fancybox($('.detalhe-produto .fancybox-content-parcelas')[0].outerHTML);
+			});
+		cardParcelaRef.find('.fbits-parcelamento-ultima-parcela').append(toggleRef);
+
 		//Ajusta posição forma de pagamento
-		$('.detalhe-produto .fbits-forma-pagamento').after($('.detalhe-produto .fbits-parcelamento-padrao'))
+		$('.detalhe-produto .fbits-forma-pagamento').after($('.detalhe-produto .col-lg-5 > .formas-pagamento-wrapper'));
+
 
 		//Carrega imagens
 		getImages($('#hdnProdutoVarianteId').val(), $('.page-produto .main-image'), $('.page-produto .thumbnails'))
