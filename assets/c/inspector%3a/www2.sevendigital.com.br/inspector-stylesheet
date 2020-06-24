@@ -1,0 +1,11 @@
+br {
+    line-height: 0;
+    height: 20px;
+    display: block;
+    margin: 20px;
+    font-size: 20px;
+}form#searchFormHeader:after {": ";content: "";background: black;position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: -1;opacity: .75;}.fbits-componente-listaSpot {}
+
+.fbits-componente-listaSpot {
+    display: flex;
+}

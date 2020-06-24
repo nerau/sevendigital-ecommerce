@@ -27,11 +27,11 @@
 
 @keyframes pulse {
 	0% {
-		box-shadow: 0 0 0 0 rgba($sunglow, 1);
+		box-shadow: 0 0 0 0 rgba($red, 1);
 	}
 
 	100% {
-		box-shadow: 0 0 0 10px rgba($sunglow, 0);
+		box-shadow: 0 0 0 10px rgba($red, 0);
 
 	}
 }

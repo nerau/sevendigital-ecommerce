@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* LEIA-ME */
+/* login.css >> DefiniÃ§Ãµes das pÃ¡ginas de LOGIN do novo Checkout */
+/* minhaconta.css >> DefiniÃ§Ãµes das pÃ¡ginas de MINHA CONTA do novo Checkout */
+/* checkout.css >> DefiniÃ§Ãµes das pÃ¡ginas de CARRINHO, FECHAMENTO E CONFIRMAÃ‡ÃƒO do novo Checkout */
+/* geral.css >> DefiniÃ§Ãµes de CabeÃ§alho e RodapÃ© */
+/* adicione/edite este arquivo para sobrescrever as definiÃ§Ãµes padrÃ£o da loja */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #dc3545;
+            box-shadow: 0 0 0 0 #dc3545; }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+            box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); } }
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #dc3545;
+            box-shadow: 0 0 0 0 #dc3545; }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+            box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); } }
+
+/*Estilos gerais*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1230px;
+    width: 100%; } }
+
+body {
+  color: #4A4A4A;
+  font-family: "Lato"; }
+
+::-moz-selection {
+  background-color: #FF9933;
+  color: #fff; }
+
+::selection {
+  background-color: #FF9933;
+  color: #fff; }
+
+html {
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }

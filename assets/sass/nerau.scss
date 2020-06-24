@@ -1,11 +1,30 @@
 
 
+@import "libs/bootstrap";
 @import "base/variables";
 @import "base/mixins";
 
 @import "libs/animate";
-@import "libs/bootstrap";
 @import "libs/fontawesome";
 @import "libs/burger";
+@import "layout/botaearmadilha";
 
-@import "layout/faq"
+#html-root #{&} {
+	@import "components/spot";
+	@import "components/forms";
+	@import "components/buttons";
+	@import "layout/faq";
+	@import "layout/header";
+	@import "layout/footer";
+	@import "layout/home";
+	@import "layout/listagem-produtos";
+	@import "layout/pagina-produto";
+	@import "layout/checkout";
+	@import "layout/carrinho";
+	@import "layout/minha-conta";
+	@import "layout/page-atendimento";
+	@import "layout/page-institucional";
+	@import "layout/lista-desejo";
+}
+
+@import "layout/miscellaneous";

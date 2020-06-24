@@ -1,0 +1,192 @@
+.custom-btn {
+	align-items: center;
+	border: 1px solid $brand-orange;
+	color: $brand-orange;
+	cursor: pointer;
+	display: flex;
+	font-family: $font-family-alternative;
+	font-weight: 200;
+	justify-content: center;
+	padding: 1em;
+	text-align: center;
+	transition: .2s ease;
+
+	&:hover {
+		background-color: $brand-orange;
+		color: #fff;
+	}
+
+	&.btn-orange {
+		background-color: $brand-orange;
+		color: #fff;
+		font-weight: normal;
+		height: auto;
+		line-height: 1.3;
+
+		&:hover {
+			background-color: darken($brand-orange, 15%);
+		}
+	}
+
+	&.btn-blue {
+		background-color: $blue-mid;
+		border-color: $blue-mid;
+		color: #fff;
+		font-weight: normal;
+		padding: .75em 1em;
+
+		&:hover {
+			background-color: darken($blue-mid, 15%);
+			border-color: darken($blue-mid, 15%);
+		}
+	}
+
+	&.btn-green {
+		background-color: $green;
+		border-color: $green;
+		color: #fff;
+		font-weight: normal;
+		padding: .75em 1em;
+
+		&:hover {
+			background-color: darken($green, 15%);
+			border-color: darken($green, 15%);
+		}
+	}
+
+	&.adicionar {
+		font-size: 0;
+
+		&:before {			
+			color: currentColor;
+			content: "\f07a";
+			font-size: 16px;
+			font-family: "Font Awesome 5 Pro";
+			font-weight: bold;
+		}
+	}
+}
+
+.btn {
+	border-radius: 0;
+}
+
+.btn.facebook {
+	align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	transition: .2s ease;
+	width: 100%;
+
+	&:hover {
+		background-color: #416bb7;
+		color: #fff;
+	}
+
+	i {
+		margin-right: 1em;
+	}
+
+	i:before {
+		content: "\f082";
+		font-family: "Font Awesome 5 Brands";
+		font-size: 20px;
+	}
+}
+
+.btn.google {
+	align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	transition: .2s ease;
+	width: 100%;
+
+	&:hover {
+		background-color: #dc453a;
+		color: #fff;
+	}
+
+	i {
+		margin-right: 1em;
+	}
+
+	i:before {
+		content: "\f2b3";
+		font-family: "Font Awesome 5 Brands";
+		font-size: 20px;
+	}
+}
+
+.btn.cadastro {
+	transition: .2s ease;
+	width: 100%;
+
+	&:hover {
+		background-color: $gray-mid;
+		border-color: $gray-mid;
+		color: #fff;
+	}
+}
+
+.fbits-social-login {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 0 $grid-gutter-width;
+
+	> * {
+		margin: 0;
+		margin-bottom: 1em;
+		text-transform: none;
+	}
+
+	a[href="/Login/Authenticate"] {
+		@extend .custom-btn;
+		border-color: $gray-mid;
+		color: $gray-mid;
+		font-weight: normal;
+
+		&:hover {
+			background-color: $gray-mid;
+			color: #fff;
+		}
+	}
+}
+
+.fbits-box-login .fbits-social-login {
+	padding: 0;
+}
+
+
+
+.fbits-box-login .btn.btn-success {
+	@extend .custom-btn, .btn-orange;
+
+}
+
+.fbits-link-senha {
+	color: #0088ff;
+	transition: .2s ease;
+
+	&:hover {
+		opacity: .5;
+	}
+}
+
+.fbits-login a[onclick="window.history.back()"] {
+	text-align: center;
+}
+
+.cadastroUsuario {
+	.btn-primary {
+		@extend .custom-btn, .btn-orange;
+	}
+}
+
+//Lista desejo
+.listadesejos {
+	#btnContinuarComprando {
+		@extend .custom-btn, .btn-orange;
+		text-decoration: none;
+	}
+}

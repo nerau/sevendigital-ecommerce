@@ -1,0 +1,36 @@
+select {
+	appearance: none !important;
+	padding-right: 2em;
+	background-image: url(https://recursos.sevendigital.com.br//i/select-icon.png);
+	background-repeat: no-repeat;
+	background-position: calc(100% - 12px) center;
+	
+	&.blue {
+		border-color: $blue-mid;
+		color: $blue-mid;
+		text-transform: capitalize;
+		padding-top: .5em;
+		padding-bottom: .5em;
+	}
+}
+
+select, input[type="text"]:not(.btn) {
+	padding: .75em 1em;
+	border-style: solid; 
+	border-width: 1px;
+	border-color: $gray-mid;
+}
+
+input[type="text"]:not(.btn), input[type="password"]:not(.btn), input[type="tel"] {
+	border-color: $gray-mid;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: unset;
+	padding: .75em 1em;
+}
+
+.form-control {
+	border-radius: 0;
+	height: auto;
+	padding: .75em 1em;
+}

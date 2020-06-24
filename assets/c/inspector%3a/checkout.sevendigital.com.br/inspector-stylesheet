@@ -1,0 +1,9 @@
+.fbits-carrinho {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}form#form2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}

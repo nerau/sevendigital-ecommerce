@@ -1,0 +1,54 @@
+<div id="produto-spot-item-@id" class="custom-spot @classSpotHover @classSpot @classDestaque @(disponivel ? "" :"fbits-spot-indisponivel")">
+    
+    <div class="spotContent">
+            
+        <a class="spot-sub-wrapper" href="@link">
+            <div class="spot-image-wrapper">
+                <div class="etiquetas-spot">
+                    <FBITS:Etiquetas />
+                </div>
+                <FBITS:ImagemProduto />
+            </div>
+        </a>
+        
+        <!-- IMPORTANTE NÃO REMOVER A DIV <div class="fbits-spot-conteudo">...</div> -->
+        <div class="fbits-spot-conteudo">
+            @if (disponivel)
+            {
+                <a class="spot-sub-wrapper" href="@link">
+                    <h3 class="spotTitle">
+                        <FBITS:Titulo />  
+                    </h3> 
+                    <FBITS:Preco exibirDescontoBoleto="True" fraseDescontoBoleto="{{precoBoleto}}"/>
+                    <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Boleto" classeItens="" ultimaParcela="true"/>
+                    <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Cartão" classeItens="" ultimaParcela="true" />
+                </a>
+                <div class="spot-botoes">
+                    <FBITS:BotoesComprar />
+                </div>
+            }
+            else
+            {
+                <a class="spot-sub-wrapper" href="@link">
+                    <h3 class="spotTitle">
+                        <FBITS:Titulo />  
+                    </h3>
+                </a>
+                
+                <div class="spotIndisponivel">
+                    Produto Indisponível
+                    <br />
+                    <FBITS:LinkProdutoIndisponivel tipo="Botao" texto="Avise-me quando estiver disponível" />
+                </div>
+
+                <div class="spot-botoes">
+                    <FBITS:BotoesComprar />
+                </div>
+            }
+        </div>
+    </div>
+    
+    <div class="atributos-wrapper">
+        <FBITS:Informacao />
+    </div>
+</div>

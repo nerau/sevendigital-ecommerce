@@ -1,0 +1,123 @@
+<div class="container-categoria container-categoria-busca-marcas">
+
+    <div class="listagem-produtos container">
+
+        <div class="mid-hero">
+            <div class="hero-desktop">
+                <FBITS:Banner filtroPosicao="Centro" idsBanners="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" lazyloadApos="" />
+            </div>
+            <div class="hero-mobile">
+                <FBITS:Banner filtroPosicao="Mobile Centro" idsBanners="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" lazyloadApos="" />
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="fbits-lateral-categoria col-lg-3">
+
+                <!--FILTRO LATERAL-->
+                
+                <section class="fbits-section-categoria fbits-filtro">
+
+                    <div class="filtros-selecionados">
+
+                        <FBITS:FiltrosSelecionados titulo="Filtros Selecionados" tipoFiltroPreco="range" classeItens="" />
+
+                    </div>
+
+                    <div class="filtros filtro-lateral-categoria">
+
+                        <span class="filtro-title">Filtros</span>
+
+                        <FBITS:Filtro quantidade="6" tipoFiltroPreco="lista" filtroPosicao="lateral" classeItens="componente-filtro" />
+
+                    </div>
+
+                </section>
+                
+            </div>
+            
+            <div class="fbits-mainBar col-lg-9">
+
+                <div class="hero-listagem">
+                    <div class="hero-items-wrapper">
+                        <div class="hero-desktop">
+                            <FBITS:Banner filtroPosicao="Topo" idsBanners="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" lazyloadApos="" />
+                        </div>
+                        <div class="hero-mobile">
+                            <FBITS:Banner filtroPosicao="Mobile Topo" idsBanners="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" lazyloadApos="" />
+                        </div>
+                    </div>
+                    <div class="slick-controls desktop"></div>
+                    <div class="slick-controls mobile"></div>
+                </div>
+
+                <section class="nav-suggestion">
+                    <span class="title">Categorias mais<br> procuradas:</span>
+                    <div class="carousel-wrapper">
+                        @{Html.RenderAction("MenuLateralEsquerda", "Menu");}
+                    </div>
+                </section>
+
+                <!--BREADCRUMB TOPO-->    
+                <section class="fbits-section-categoria fbits-breadcrumb-topo-categoria">
+                    <div class="bread">
+                        <FBITS:Breadcrumb textoPaginaPrincipal = "Home" />
+                    </div>
+                </section>
+
+                <div class="options-bar">
+                    <div class="qtd-resultado">
+                        <FBITS:InformacaoResultadoBusca busca="primaria" textoExibicao="Foram encontrados {{produtos}} produtos" />
+                    </div>
+
+                    <!--ORDENAÇÃO-->
+                    <section class="fbits-section-categoria fbits-ordenacao-categoria">
+                        <div class="ordenar">
+                            <FBITS:Ordenacao />
+                        </div>
+                    </section>  
+
+                </div>
+
+                <!--VITRINE-->
+                <section class="fbits-section-categoria fbits-vitrine-categoria">
+
+                    <div class="row row-vitrine-categoria">
+
+                        <div class="spots-interna"> 
+
+                            <FBITS:ListaSpots tipo="" configuracaoCarrossel="{}" classeItens="" />
+
+                            <FBITS:ListaSpots tipo="" busca="secundaria" configuracaoCarrossel="{}" classeItens="" />  
+
+                        </div>
+
+                    </div>
+
+                    <FBITS:Paginacao tipo="NumeroPagina" />
+
+                </section>
+
+                <div class="category-excerpt-wrapper">
+
+                    <div class="container">
+
+                        <div class="page-excerpt">
+
+                            <FBITS:Conteudo filtroPosicao="rodape" idsConteudos="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,241 @@
+<div class="home-wrapper">
+    <section class="hero-home">
+        <div class="hero-desktop">
+            <FBITS:Banner filtroPosicao="topo" idsBanners="" tipo="carrossel"  configuracaoCarrossel="{
+                dots: true,
+                arrows: true,
+                infinite: false,
+                speed: '300',
+                autoplay: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                appendDots: '.hero-home .hero-desktop .slick-controls',
+                appendArrows: '.hero-home .hero-desktop .slick-controls',
+                }" classeItens="" />
+            <div class="slick-controls container"></div>
+        </div>
+        <div class="hero-mobile">
+            <FBITS:Banner filtroPosicao="Mobile topo" idsBanners="" tipo="carrossel"  configuracaoCarrossel="{
+                dots: true,
+                arrows: true,
+                infinite: false,
+                speed: '300',
+                autoplay: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                appendDots: '.hero-home .hero-mobile .slick-controls',
+                appendArrows: '.hero-home .hero-mobile .slick-controls'
+                }" classeItens="" />
+            <div class="slick-controls container"></div>
+        </div>        
+    </section>
+    <div class="container">
+        
+        <section class="nav-suggestion">
+            <span class="title">O que você<br> precisa hoje?</span>
+            <div class="carousel-wrapper">
+                @{Html.RenderAction("MenuLateralEsquerda", "Menu");}
+            </div>
+        </section>
+
+        <section class="vitrine-section">
+
+            <div class="section-title-wrapper">
+                <h4 class="section-title offer-icon">Ofertas em destaque</h4>
+            </div>
+
+            <div class="products-list">
+                <FBITS:ListaSpots idsHotsites="96398" tipo="estatico" configuracaoCarrossel="{
+                  dots: false,
+                  infinite: false,
+                  speed: '300',
+                  slidesToShow: 4,
+                  slidesToScroll: 1,
+                  mobileFirst: true,
+                  responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: 'unslick'
+                    },
+                      {
+                          breakpoint: 1200,
+                          settings: {
+                              slidesToShow: 3,
+                              slidesToScroll: 3
+                          }
+                      },
+                    {
+                      breakpoint: 767,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                      }
+                    }
+                  ]
+                }" classeItens="componente-vitrine" />
+            </div>
+        </section>
+
+        <div class="section-hero">
+            <div class="hero-desktop">
+                <FBITS:Banner filtroPosicao="Centro" idsBanners="" tipo="carrossel"  configuracaoCarrossel="{
+                    dots: false,
+                    arrows: false,
+                    infinite: false,
+                    speed: '500',
+                    autoplay: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: true,
+                    }" classeItens="" />
+            </div>
+            <div class="hero-mobile">
+                <FBITS:Banner filtroPosicao="Mobile Centro" idsBanners="" tipo="carrossel"  configuracaoCarrossel="{
+                    dots: false,
+                    arrows: false,
+                    infinite: false,
+                    speed: '500',
+                    autoplay: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: true,
+                    }" classeItens="" />
+            </div>
+        </div>
+
+        <section class="vitrine-section">
+
+            <div class="section-title-wrapper">
+                <h4 class="section-title heart-icon">Os mais procurados</h4>
+            </div>
+            <div class="products-list">
+                <FBITS:ListaSpots idsHotsites="96399" tipo="estatico" configuracaoCarrossel="{
+                    dots: false,
+                    infinite: false,
+                    speed: '300',
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    mobileFirst: true,
+                    responsive: [
+                            {
+                                breakpoint: 1400,
+                                settings: 'unslick'
+                            },
+                          {
+                              breakpoint: 1200,
+                              settings: {
+                                  slidesToShow: 3,
+                                  slidesToScroll: 3
+                              }
+                          },
+                          {
+                              breakpoint: 767,
+                              settings: {
+                                  slidesToShow: 2,
+                                  slidesToScroll: 2
+                              }
+                          }
+                      ]
+                  }" classeItens="componente-vitrine" />
+            </div>
+        </section>
+
+        <section class="brands-slider">
+            <span class="title">Compre por marca:</span>
+            <div class="slider-wrapper">
+                <FBITS:ListaMarcas tipo="carrossel" configuracaoCarrossel="{
+                    dots: false,
+                    infinite: false,
+                    speed: '300',
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    arrows: true,
+                    responsive: [
+                          {
+                              breakpoint: 1200,
+                              settings: {
+                                  slidesToShow: 3,
+                                  slidesToScroll: 3
+                              }
+                          },
+                          {
+                              breakpoint: 767,
+                              settings: {
+                              slidesToShow: 2,
+                              slidesToScroll: 2
+                          }
+                      }
+                      ]
+                  }" classeItens="" lazyloadApos="" />
+            </div>
+        </section>
+
+
+        <div class="section-hero">
+            <div class="hero-desktop">
+                <FBITS:Banner filtroPosicao="Centro Lower" idsBanners="" tipo="carrossel"  configuracaoCarrossel="{
+                    dots: false,
+                    arrows: false,
+                    infinite: false,
+                    speed: '500',
+                    autoplay: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: true,
+                    }" classeItens="" />
+            </div>
+            <div class="hero-mobile">
+                <FBITS:Banner filtroPosicao="Mobile Centro Lower" idsBanners="" tipo="carrossel"  configuracaoCarrossel="{
+                    dots: false,
+                    arrows: false,
+                    infinite: false,
+                    speed: '500',
+                    autoplay: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    fade: true,
+                    }" classeItens="" />
+            </div>
+        </div>
+
+
+        <section class="vitrine-section vitrine-novidades">
+
+            <div class="section-title-wrapper">
+                <h4 class="section-title star-icon">Acabou de chegar</h4>
+            </div>
+
+            <div class="products-list is-slider">
+                <FBITS:ListaSpots idsHotsites="96400" tipo="estatico" configuracaoCarrossel="{
+                    dots: true,
+                    arrows: true,
+                    infinite: false,
+                    speed: '300',
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    appendDots: '.vitrine-novidades .slick-controls',
+                    appendArrows: '.vitrine-novidades .slick-controls',
+                    responsive: [
+                          {
+                              breakpoint: 1200,
+                              settings: {
+                                  slidesToShow: 3,
+                                  slidesToScroll: 3
+                              }
+                          },
+                          {
+                              breakpoint: 767,
+                              settings: {
+                                  slidesToShow: 2,
+                                  slidesToScroll: 2
+                              }
+                          }
+                      ]
+                  }" classeItens="componente-vitrine" />
+                  <div class="slick-controls"></div>
+            </div>
+        </section>
+    </div>
+</div>

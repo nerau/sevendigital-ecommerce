@@ -9,3 +9,67 @@
 
 @import "../base/variables";
 @import "../base/mixins";
+
+.fbits-login {
+	>.container > .row > .full-container {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+
+	.fbits-form-recuperacao-senha {
+		transition: unset;
+
+		.form-control {
+			padding-top: .5em !important;
+			padding-bottom: .5em !important;
+		}
+	}
+
+	.row-telefone {
+		.col-md-6:nth-child(1) {
+			@media (max-width: 768px) {
+				margin-bottom: 2em;
+			}
+		}
+
+		.col-md-6:nth-child(2) label{
+			width: 100%;
+		}
+	}
+
+	.fbits-btn-show-password {
+		@media (max-width: 768px) {
+			top: 28px !important;
+		}
+
+		@media (min-width: 992px) {
+			top: 28px !important;
+		}
+	}
+
+	.fbits-box-login {
+		.fbits-btn-show-password {
+			top: 28px !important;
+		}
+	}
+
+	.custom-box-endereco {
+		> .form-row {
+			> .form-group:nth-child(1) {
+				margin-bottom: 0;
+			}
+
+			> .form-group:nth-child(2) {
+				align-items: center;
+				display: flex;
+				
+				i, label {
+					display: none;
+				}
+
+			}
+		}
+
+	}
+}

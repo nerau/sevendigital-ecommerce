@@ -1,0 +1,568 @@
+.new-checkout {
+	display: flex;
+	flex-wrap: wrap;
+	font-family: $font-family-alternative;
+	overflow: unset;
+
+	> .col-lg-5 {
+		overflow: unset;
+	}
+
+	.fbits-produtos-container {
+		background-color: $blue-mid;
+		border: unset;
+		padding: 0;
+		// position: sticky;
+		// top: 0;
+
+		.title-box {
+			display: none;
+		}
+
+		.currency {
+			color: #fff !important;
+		}
+	}
+
+	.fbits-responsive-carrinho-subtotal-valor, .fbits-responsive-carrinho-total, .fbits-responsive-carrinho-total-header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.fbits-responsive-carrinho-total-header {
+		max-width: 100% !important;
+		// padding: $grid-gutter-width/2 $grid-gutter-width !important;
+		width: 100% !important;
+	}
+
+	.fbits-responsive-carrinho-subtotal {
+		padding: $grid-gutter-width/2 $grid-gutter-width !important;
+	}
+
+	.fbits-responsive-carrinho-subtotal-valor {
+		background-color: #0086CC !important;
+		font-size: 21px;
+	}
+
+	.fbits-responsive-carrinho-frete { 
+
+		.dfrete {
+			display: none !important;
+		}
+
+		.fbits-responsive-carrinho-valores-header {
+			align-items: center;
+			background-color: #0076B3;
+			color: #fff;
+			display: flex;
+			font-size: 16px;
+			justify-content: space-between;
+			padding: $grid-gutter-width/2 $grid-gutter-width;
+		}
+	}
+
+	.fbits-responsive-carrinho-desconto {
+		padding: $grid-gutter-width/2 $grid-gutter-width !important;
+		width: 100%;
+
+		> * {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			font-size: 16px;
+		}
+	}
+	
+	.fbits-responsive-carrinho-total {
+		background-color: #006599 !important;
+		padding: $grid-gutter-width/2 $grid-gutter-width !important;
+
+		.currency {
+			font-weight: bold;
+		}
+	}
+
+	.voltar-carrinho {
+		display: none;
+	}
+
+	.box-default {
+		border: none !important;
+	}
+
+	.title-box {
+		border-bottom: 2px solid $gray-mid-light;
+		color: $blue-mid;
+		font-family: $font-family-alternative;
+	}
+
+	.fbits-produtos-container {
+		display: flex;
+		flex-direction: column;	
+	}
+
+	.fbits-responsive-carrinho-items {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.fbits-responsive-carrinho-item {
+		border: none !important;
+		padding-right: $grid-gutter-width !important;
+		padding-left: $grid-gutter-width !important;
+		padding-bottom: 0 !important;
+
+		&:last-child {
+			padding-bottom: 2em !important; 
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&:after {
+			background-color: $blue-light;
+			display: block;
+			height: 2px;
+			margin: 1em 0 0;
+			opacity: .25;
+			width: 100%;
+		}
+
+		.currency {
+			font-size: 28px !important;
+		}
+
+		.fbits-responsive-carrinho-item-descricao {
+			a {
+				color: #000;
+			}
+		}
+	}
+
+	.fbits-responsive-carrinho-item-valor-unitario {
+		width: 100%;
+
+		> .text-nowrap {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	.fbits-responsive-carrinho-detalhes {
+		height: auto;
+		position: relative;
+	}
+
+	#fbits-observacao-textarea {
+		min-height: 100px;
+		padding: 1em;
+		width: 100%;
+	}
+
+	.title-box {
+		font-size: 21px;
+		padding-right: $grid-gutter-width;
+		padding-left: $grid-gutter-width;
+
+		@include media-breakpoint-down(xs){
+			font-size: 18px !important;
+		}
+
+		+ * {
+			padding: 0 $grid-gutter-width !important;
+		}
+
+
+		i {
+			display: none;
+		}
+	}
+
+	.usuario-nome {
+		font-size: 14px;
+		// font-weight: normal;
+	}
+
+	.box-identity {
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 3em;
+		}
+	}
+
+	.usuario-email a {
+		@include media-breakpoint-down(xs) {
+			bottom: unset;
+			top: calc(100% + .5em);
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	.box-default {
+		position: relative;
+
+		i {
+			display: none;
+		}
+	}
+
+	.item-endereco {
+		display: flex;
+
+		&:hover {
+			background-color: unset;
+			padding: 10px 0;
+
+			button {
+				opacity: .5;
+				right: 0;
+			}
+		}
+
+		> form {
+			flex-shrink: 0;
+			margin-left: 1em;
+			order: 1;
+			width: 30px;
+		}
+
+	}
+
+	[data-frete-item-nome] {
+		color: $brand-orange;
+		font-size: 21px;
+		text-transform: none;
+	}
+
+	.checkout-forma-envio-radio {
+		align-items: center;
+		display: inline-flex;
+		justify-content: center;
+		position: relative;
+
+		input {
+			appearance: none;
+			border: 1px solid $brand-orange;
+			border-radius: 100px;
+			height: 23px;
+			margin: 0;
+			margin-right: 1.5em;
+			width: 23px;
+
+			&:checked {
+				background-color: $brand-orange;
+				box-shadow: inset 0 0 0 3px #fff;
+			}
+		}
+	}
+
+	.checkout-mensagem-forma-envio {
+		display: none;
+	}
+
+	.item-frete-option {
+		border: none !important;
+		background-color: unset !important;
+		padding-right: 0;
+		padding-left: 0;
+
+
+		[data-frete-item-prazo] {
+			font-size: 14px;
+			font-weight: 200;
+			font-family: $font-family-alternative;
+		}
+
+		.nome-item-valor {
+			font-size: 28px;
+			font-family: $font-family-alternative;
+		}
+
+		.nome-item-envio {
+			align-items: center;
+			display: flex;
+			padding-left: 0;
+		}
+
+		> * {
+			padding-left: 45px;
+		}
+	}
+
+	.fbits-endereco-container {
+
+		#formEndereco, #form-endereco-enderecos {
+			.btn {
+				margin-bottom: 1em;
+				width: 100%;
+			}
+		}
+
+		.btn {
+			border-radius: 0;
+			border-color: $blue-mid;
+			background-color: unset;
+			color: $blue-mid;
+			display: inline-block;
+			transition: .2s ease;
+			// position: absolute;
+			// right: 0;
+			// top: 0;
+
+			&:hover {
+				background-color: rgba($blue-mid, .25);
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 14px;
+			}
+		}		
+	}
+
+	#validarCupom {
+		background-color: $blue-mid;
+		border: 1px solid $blue-mid;
+		border-radius: 0;
+		color: #fff;
+		transition: .2s ease;
+
+		&:hover {
+			background-color: darken($blue-mid, 15%);
+		}
+	}
+
+	.fbits-cupom-container {
+		display: flex;
+		flex-wrap: wrap;
+
+		input {
+			flex: 3;
+		}
+
+		form {
+			width: 100%;
+		}
+
+		.btnLimpar {
+			@extend .custom-btn, .btn-blue;
+			flex: 1;
+		}
+
+		.fbits-cupom-msg {
+			flex: 100%;
+			margin-top: 1em;
+
+			&:empty {
+				display: none;
+			}
+		}
+
+		.form-control {
+			padding: .75em 1em;
+		}
+
+		.input-group {
+			display: flex;
+
+			@include media-breakpoint-down(xs) {
+				flex-direction: column;
+			}
+
+			input {
+				box-shadow: unset;
+				flex: 2;
+			}
+
+			button {
+				flex: 1;
+				margin-left: 1em;
+
+				@include media-breakpoint-down(xs) {
+					margin-left: 0;
+					margin-top: .5em;
+				}
+			}
+		}
+	}
+
+	.checkout-mensagem-passo-info {
+		width: 100%;
+	}
+
+	.fbits-sair {
+		border: 1px solid $blue-mid;
+		color: $blue-mid;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 16px;
+		margin-top: 1em;
+		padding: .5em 1em;
+		transition: .2s ease;
+		width: 100%;
+
+		&:hover {
+			background-color: rgba($blue-mid, .25);
+		}
+
+		@include media-breakpoint-down(xs) {
+			font-size: 14px;
+		}
+	}
+
+	.fbits-info-pessoal {
+		padding: 0;
+
+		> .fbits-sair {
+			display: inline-block;
+			position: relative;
+			text-align: center;
+		}
+	}
+
+	
+
+	div#myTabContent {
+		border: none;
+	}
+
+	.formas-pagamento {
+
+		select {
+			color: $gray-mid;
+			font-size: 16px;
+
+			&:nth-child(3) {
+				margin-left: 1em;
+			}
+
+			&[data-gateway-parcelamento] {
+				color: $blue-mid;
+
+				@extend select.blue;
+			}
+		}
+
+		[data-gateway-cartao] {
+
+			input {
+				font-size: 16px;
+				width: 100%;
+
+				&::placeholder {
+					color: $gray-mid;
+				}
+			}
+
+		}
+
+		.tab-content {
+			[data-gateway-nome="Boleto"] [data-gateway-pagamento]{
+				display: none;
+			}
+		}
+
+		.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+			border: none;
+			background-color: unset;
+		}
+
+		.nav-tabs {
+			margin-bottom: 1em;
+		}
+
+		.nav-tabs>li>a {
+			align-items: center;
+			border: none !important;
+			background-color: unset !important;
+			color: $brand-orange;
+			display: inline-flex;
+			transition: .2s ease;
+
+			&:hover {
+				opacity: .75;
+			}
+
+			label {
+				font-size: 21px;
+				margin: 0;
+			}
+
+			input {
+				appearance: none;
+				border: 1px solid $brand-orange;
+				border-radius: 100px;
+				height: 23px;
+				margin: 0;
+				margin-right: .5em;
+				width: 23px;
+
+				&:checked {
+					background-color: $brand-orange;
+					box-shadow: inset 0 0 0 3px #fff;
+				}
+			}
+		}
+
+		.checkout-mensagem-forma-pagamento {
+			display: none;
+		}
+
+		.checkout-forma-pagamento-radio {
+			display: inherit;
+		}
+
+		.nav-item.active .nav-link {
+			color: $brand-orange;
+
+
+			.checkout-forma-pagamento-radio {
+
+			}
+		}
+
+		.nav-link, .nav-link * {
+			cursor: pointer;
+		}
+
+		#myTabContent {
+			padding: 0
+		}
+
+		.forminline {
+			display: flex;
+			flex-wrap: wrap;
+
+			label {
+				font-size: 16px;
+				flex: 100%;
+				margin-top: 1em;
+			}
+
+			select {
+				flex: 1;
+			}
+
+		}
+	}
+
+	.formas-pagamento select[data-gateway-parcelamento] {
+		width: 100%;
+	}
+
+	.finalizacao-wrapper {
+		position: sticky;
+		top: 0;
+
+		.btn-success {
+			float: none;
+			margin-top: 1em;
+		}
+	}
+
+	[data-gateway-cartao] > [class*=card-wrapper] {
+		display: none;
+	}
+}

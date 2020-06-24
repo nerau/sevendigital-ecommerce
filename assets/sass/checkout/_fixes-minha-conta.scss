@@ -1,0 +1,57 @@
+.minhaConta .minhaconta {
+	padding: 0;
+	padding-bottom: 2em;
+
+	@extend .container;
+
+	#fbits-minhaconta > .container-fluid {
+		padding: 0;
+	}
+
+	.mainBarInterna, .sideBar {
+		@media (max-width: 992px) {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	.fbits-minhaconta-box {
+		@media (max-width: 576px) {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+	.fbits-minhaconta-btn-details {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	.fbits-minhaconta-box-button {
+		line-height: 1;
+		padding: 1em;
+		overflow: hidden;
+	}
+
+	.minhaconta-produtos-pedido {
+		border: none;
+	}
+
+	.fbits-minha-conta-detalhe-pedido > .row, .minhaconta-produtos-pedido .row, .minha-conta-produtos .detalhe-unitario, .minha-conta-produtos .detalhe-valor, .minha-conta-produtos .detalhe-status {
+		margin: 0;
+	}
+}
+
+.fbits-btn-ver-pedido-completo {
+	white-space: normal;
+}
+
+.fbits-login #naoSeiCep {
+	@media (max-width: 992px) {
+		display: block;
+		margin-top: -3em;
+	}
+}

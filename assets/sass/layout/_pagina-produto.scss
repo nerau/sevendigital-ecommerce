@@ -1,0 +1,990 @@
+.content.produto .fbits-layout-produto {
+	display: none;
+}
+
+.page-produto {
+	#fbits-breadcrumb {
+		padding: 2em 0;
+
+		@include media-breakpoint-down(md) {
+			padding: 1em 0;
+		}
+
+		@include media-breakpoint-down(sm) {
+
+		}
+
+		ol {
+			margin: 0;
+		}
+	}
+
+	.detalhe-produto {
+		float: none;
+
+		select.optionProduct {
+			font-family: $font-family-alternative;
+			text-align: center;
+			padding-top: .5em;
+			padding-bottom: .5em;
+		}
+	}
+
+	#btnEnviarAviseMe {
+		@extend .custom-btn, .btn-orange;
+		color: #fff;
+		font-weight: normal;
+		height: auto;
+	}
+
+	.avisoIndisponivel {
+		display: flex;
+		flex-wrap: wrap;
+
+		>* {
+			flex: 1 100%;
+		}
+
+		input {
+			height: auto;
+			flex: 2;
+			margin-right: 1em;
+			text-align: center;
+			text-indent: 0;
+
+			@include media-breakpoint-up(lg) {
+				flex: 100%;
+				margin-right: 0;
+				margin-bottom: 1em;
+			}
+
+			@include media-breakpoint-down(sm) {
+				flex: 100%;
+				margin-right: 0;
+			}
+		}
+
+		input#btnEnviarAviseMe {
+			margin: 0;
+			text-transform: none;
+			flex: 1;
+			padding-top: .5em;
+			padding-bottom: .5em;
+			white-space: normal;
+
+			@include media-breakpoint-down(sm) {
+				flex: 100%;
+				margin-top: 1em;
+			}
+		}
+	}
+
+	.fbits-produto-nome {
+		font-weight: normal;
+		line-height: 1.3;
+		margin-bottom: 15px;
+		text-transform: none;
+
+		@include media-breakpoint-down(md) {
+			margin-top: 15px;
+		}
+	}
+
+	#outrasAvaliacoes {
+		font-family: $font-family-alternative;
+		font-size: 14px;
+		font-weight: normal;
+		text-transform: none;
+		text-decoration: none;
+	}
+
+	.detalhe-produto .addListaDesejos {
+		align-items: center;
+		border: 1px solid $blue-mid;
+		color: $blue-mid;
+		display: inline-flex;
+		font-size: 14px;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding: .5em 1em;
+		position: relative;
+		transition: .2s ease;
+		white-space: nowrap;
+
+		&:hover {
+			background-color: rgba($blue-mid, .25);
+		}
+
+		&.listaDesejosAdicionado {
+			background-color: $blue-mid;
+			color: #fff;
+
+			&:after {
+				color: gold;
+				opacity: 1;
+			}
+		}
+
+		&:before {
+			color: currentColor;
+			content: "\f005";
+			font-family: "Font Awesome 5 Pro";
+			margin-right: .5em;
+		}
+
+		&:after {
+			color: currentColor;
+			content: "\f005";
+			font-weight: bold;
+			font-family: "Font Awesome 5 Pro";
+			left: 1em;
+			position: absolute;
+			opacity: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: .2s ease;
+		}
+	}
+
+	#fbits-avaliacao {
+		display: inline-flex;
+		float: none;
+		margin-right: 1em;
+		width: auto;
+	}
+
+	.title-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.lnkCategoriaPrincipal {
+		align-items: center;
+		color: $blue-mid;
+		display: inline-flex;
+		height: 30px;
+		font-size: 14px;
+		font-style: italic;
+		transition: .2s ease;
+		// text-decoration: underline;
+
+		&:hover {
+			opacity: .5;
+		}
+
+		&:before {
+			content: "Veja mais produtos em: ";
+			color: $body-color;
+			font-style: normal;
+			margin-right: .5em;
+			text-decoration: none;
+		}
+	}
+
+	.precoParcela {
+		color: $gray-mid;
+		font-family: $font-family-alternative;
+		font-size: 16px;
+	}
+
+	.review-and-category {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	[id*=view-item-quantidade] {
+		float: none;
+		margin-top: 1em;
+	}
+
+	.fbits-parcelamento-padrao {
+		align-items: center;
+		display: inline-flex;
+		padding-top: 0;
+		width: 100%;
+
+		&:before {
+			color: $brand-orange;
+			font-family: "Font Awesome 5 Pro";
+			font-size: 24px;
+			margin-right: .25em;
+			text-align: center;
+			width: 30px;
+		}
+
+		&[data-componente-fbits-config*=Cartão] {
+			&:before {
+				content: "\f09d";
+			}
+
+			.fbits-parcela-no, .fbits-parcela-nome-grupo {
+				display: none;
+			}
+		}
+
+		&[data-componente-fbits-config*=Boleto] {
+			&:before {
+				content: "\f02a";
+			}
+
+			.precoParcela {
+				&:before {
+					content: "à vista no boleto c/ 10% de desconto";
+				}
+			}
+
+			.precoParcela > * {
+				display: none;
+			}
+
+			.fbits-parcela-semjuros, .fbits-quantidadeParcelas, .fbits-parcela-x, .fbits-parcela {
+				display: none;
+			}
+		}
+	}
+
+	.fbits-forma-pagamento {
+		margin-bottom: 0.5em;
+		margin-top: 1em;
+
+		.precoDe {
+			color: $gray-mid;
+			font-size: 16px;
+			font-family: $font-family-alternative;
+
+			&:before {
+				content: "de";
+				margin-right: .25em;
+			}
+		}
+
+		.precoPor {
+			color: $blue-dark;
+			font-size: 47px;
+			font-family: $font-family-alternative;
+			font-weight: bold;
+
+			@include media-breakpoint-down(sm) {
+				font-size: 28px;
+			}
+
+			&:before {
+				margin-right: .25em;
+				text-transform: lowercase;
+			}
+		}
+	}
+
+	#msgEstoqueDisponivel {
+		display: none;
+	}
+
+	.fbits-titulo-quantidade {
+		margin-right: .5em;
+		text-transform: capitalize;
+
+		select {
+			text-align: center;
+			width: auto;
+		}
+	}
+
+	.produto-comprar {
+		float: none;
+		max-width: 100%;
+		text-align: unset;
+		width: auto;
+	}
+
+	.btn-comprar {
+		align-items: center;
+		display: inline-flex;
+		font-size: 24px;
+		justify-content: center;
+		margin-top: .5em;
+		max-width: 100%;
+		padding: 1.5em 4em;
+		transition: .2s ease;
+		width: auto;
+
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: 18px;
+		}
+
+		&:hover {
+			color: #fff;
+			background-color: darken($brand-orange, 15%);
+		}
+
+		&:after {
+			color: currentColor;
+			content: "\f07a";
+			font-size: 18px;
+			font-weight: bold;
+			font-family: "Font Awesome 5 Pro";
+			margin-left: .5em;
+		}
+	}
+
+	.fbits-calculafrete {
+		margin-top: 2em;
+
+		* {
+			float: none;
+		}
+
+		.summary {
+			display: none;
+		}
+
+		input {
+			margin-top: 0;
+			height: 50px;
+		}
+
+		#txtCalculaFreteProduto{
+			border-color: $blue-mid;
+			color: $blue-mid;
+			margin-right: .5em;
+			padding: 0 .5em;
+			width: 150px;
+			
+			@include media-breakpoint-down(sm) {
+				font-size: 14px;
+				margin-right: 0;
+				text-indent: 0;
+				text-align: center;
+				width: 140px;
+			}
+
+			&::placeholder {
+				color: $blue-mid;
+			}
+		}
+
+		.btnCalculaFreteProduto {
+			background-color: $blue-mid;
+			text-transform: none;
+			transition: .2s ease;
+			width: 100px; 
+
+			@include media-breakpoint-down(sm) {
+				font-size: 16px;
+				width: 80px;
+			}
+
+			&:hover {
+				background-color: darken($blue-mid, 15%);
+			}
+		}
+
+		.simule {
+			align-items: center;
+			display: inline-flex;
+			font-size: 0;
+			line-height: 50px !important;
+			margin-right: 10px;
+			margin-top: 0;
+			width: auto;
+
+			@include media-breakpoint-down(sm) {
+				padding-left: 0;
+			}
+
+			&:before {
+				color: $body-color;
+				content: "Frete";
+				display: inline-block;
+				height: 50px;
+				font-size: 16px;
+				text-transform: none;
+			}
+		}
+
+		#naoSeiCep {
+			display: none;
+		}
+
+		.resultado-frete {
+			border-color: $blue-mid;
+			box-shadow: none;
+			margin-top: 1em;
+
+			span {
+				color: $blue-mid;
+				padding: 1em;
+			}
+		}
+
+		tr td:first-child, tr td:last-child {
+			background-color: rgba($blue-mid, .05);
+		}
+
+		.errosFrete {
+			padding: 0;
+		}
+	}
+
+	div[id^="produto-variante"] {
+		float: none;
+	}
+
+	.fbits-sku {
+		float: none;
+		text-align: left;
+		width: 100%;
+	}
+
+	#imagem-pagina-produto {
+		padding: 0 3em;
+		position: relative;
+		z-index: 0;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 3em;
+			padding: 0 1.5em;
+		}
+
+		.main-image, .thumbnails {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		.slick-list {
+			flex: 1;
+		}
+
+		.images-wrapper {
+			// position: relative;
+		}
+
+		img {
+			display: block;
+			margin: auto;
+		}
+
+		.slick-arrow {
+			background-color: unset;
+			font-size: 0;
+			position: absolute;
+			top: 50%;
+			transform: scale(1) translateY(-50%);
+			transform-origin: 50% 0;
+
+			@include media-breakpoint-down(md) {
+
+			}
+
+			&:active {
+				transform: scale(.8) translateY(-50%);
+			}
+
+			&:hover:before {
+				color: $black;
+			}
+
+			&:before {
+				color: $gray-mid;
+			}
+
+			&.slick-prev {
+				left: 20px;
+
+				@include media-breakpoint-down(md) {
+					left: 10px;	
+				}
+			}
+
+			&.slick-next {
+				right: 20px;
+
+				@include media-breakpoint-down(md) {
+					right: 10px;
+				}
+			}
+		}
+
+
+		.slick-dots {
+			display: flex;
+			justify-content: center;
+			margin: 1em 0;
+			position: relative;
+
+			button {
+				font-size: 0;
+				padding: 4px;
+			}
+
+			li {
+				height: 15px;
+				width: 15px;
+			}
+
+			li.slick-active button{
+				background-color: $brand-orange-burn;
+			}
+		}
+
+		.thumbnails {
+
+			li {
+				padding: 0 1em;
+			}
+
+			.thumb-wrapper {
+				cursor: pointer;
+				position: relative;
+				padding: 10px;
+				transition: .2s ease;
+
+				&:hover {
+					box-shadow: inset 0 0 0 5px rgba($brand-orange, .25);
+				}
+
+				&:before {
+					content: "";
+					display: block;
+					max-width: 100%;
+					padding-top: 100%;
+				}
+			}
+
+			img:not(.zoomImg) {
+				height: calc(100% - 20px);
+				left: 50%;
+				object-fit: scale-down;
+				position: absolute;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: calc(100% - 20px);
+				z-index: -1;
+			}
+
+			.slick-current {
+				.thumb-wrapper {
+					box-shadow: inset 0 0 0 10px $brand-orange;
+				}
+			}
+		}
+	}
+
+	.informacoes-produto {
+		margin: 2em 0;
+
+	}
+
+	.section-title {
+		align-items: center;
+		color: $brand-orange;
+		display: flex;
+		font-size: 28px;
+		margin-bottom: 1em;
+		width: 100%;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 20px;
+		}
+
+		&:after {
+			background-color: $gray-mid-light;
+			content: "";
+			height: 1px;
+			flex: 1;
+			margin-left: 1em;
+			width: 100%;
+		}
+	}
+
+	.section-compre-junto {
+		#divGruposProdutoCompreJunto, #divGrupoProduto, #ulGrupoProduto, .borderVejaTambem {
+			float: none;
+		}
+
+		.borderVejaTambem {
+			display: flex;
+			overflow-x: auto;
+		}
+
+		.imgProdutoThumb {
+			margin-bottom: 1em;
+		}
+
+		[id*=view-item-quantidade-] {
+			display: none;
+		}
+
+		img {
+			@include media-breakpoint-down(md) {
+				max-width: 140px;
+			}
+		}
+
+		.line {
+			height: auto;
+			line-height: 1.3;
+			margin: 0;
+			margin-top: 2em;
+
+			span {
+				display: none;
+			}
+		}
+
+		.title {
+			@extend .section-title;
+			font-weight: bold;
+			text-transform: none;
+
+			&:before {
+				color: currentColor;
+				content: "\f07a";
+				font-size: 24px;
+				font-weight: 700;
+				font-family: "Font Awesome 5 Pro";
+				margin-right: .5em;
+			}
+		}
+
+		.spotTitle {
+			font-weight: normal;
+			font-family: $font-family-alternative;
+			text-transform: none;
+		}
+
+		.produtoRecomendadoComprar {
+			border: none;
+			padding-bottom: 0;
+		}
+
+		.precoDe {
+			color: $black;
+			font-size: 14px;
+			font-family: $font-family-alternative;
+			font-weight: 200;
+			text-align: center;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+
+		.precoPor {
+			color: $blue-dark;
+			font-size: 28px;
+			font-weight: bold;
+			font-family: $font-family-alternative;
+			margin-top: 0;
+			white-space: nowrap;
+
+			@include media-breakpoint-down(md) {
+				font-size: 21px;
+			}
+
+			&:before {
+				margin-right: .25em;
+				text-transform: lowercase;
+			}
+		}
+
+		.spotVejaTambem div#divSpotProdutoRecomendado {
+			@include media-breakpoint-down(md) {
+				max-width: 150px;
+			}
+		}
+
+		#btnComprarTodos {
+			color: #fff;
+			font-size: 0;
+			font-family: $font-family-alternative;
+			font-weight: bold;
+			flex-wrap: nowrap;
+			line-height: 1;
+			margin-top: 20px;
+			padding: 20px 30px;
+			height: auto;
+			transition: .2s ease;
+			text-transform: none;
+			white-space: nowrap;
+
+			&:hover {
+				background-color: darken($brand-orange, 15%);
+			}
+
+			&:before {
+				content: "Comprar";
+				font-size: 16px;
+			}
+
+			&:after {
+				color: currentColor;
+				content: "\f07a";
+				font-size: 18px;
+				font-weight: 700;
+				font-family: "Font Awesome 5 Pro";
+				margin-left: .5em;
+			}
+		}
+
+		.divisor, .divisorIgual {
+			align-items: center;
+			display: flex;
+			height: auto;
+			padding-right: .75em;
+			padding-left: .75em;
+
+			&:before {
+				align-items: center;
+				background-color: $brand-orange;
+				border-radius: 100px;
+				color: #fff;
+				display: inline-flex;
+				justify-content: center;
+				height: 30px;
+				margin: auto;
+				text-align: center;
+				width: 30px;
+			}
+		}
+
+		li > [id*=produto-item] {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		[id*=divPrecoCompreJuntoPorProduto] {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		[id*=precoCompreJuntoPorProduto] {
+			float: none;
+			margin-top: 0;
+			width: 100%;
+		}
+	}
+
+	.reviews-wrapper {
+		margin-bottom: 1em;
+
+		.divOpinioes, .line, .reviewData {
+			display: none;
+		}
+
+		#fbits-avaliar-produto, .avaliacao-Produto, * {
+			float: none;
+		}
+
+		#fbits-avaliar-produto {
+			width: 100%;
+		}
+
+		.toggle-avaliar {
+			@extend .custom-btn;
+			border: none;
+			background-color: $blue-mid;
+			color: #fff;
+			display: inline-block;
+			font-size: 16px;
+			font-weight: normal;
+			margin: 0 auto 1em;
+			padding-right: 3em;
+			padding-left: 3em;
+
+			&:hover {
+				background-color: darken($blue-mid, 15%);
+			}
+		}
+
+		input, textarea {
+			color: $body-color;
+			text-transform: none;
+		}
+
+		.make-review-wrapper {
+			display: none;
+		}
+
+		.nota-geral {
+			margin-bottom: 1em;
+
+			> div:not([class]) {
+				align-items: center;
+				display: flex;
+			}
+
+			.small-text {
+				font-size: 12px;
+				font-style: italic;
+			}
+		}
+		.avalie-top {
+			display: none;
+		}
+
+		.nota-principal {
+			color: $brand-orange;
+			font-size: 59px;
+			font-family: $font-family-alternative;
+		}
+
+		.nota-secundaria {
+			color: $gray-mid;
+			font-family: $font-family-alternative;
+			font-size: 36px;
+			font-weight: bold;
+			margin-left: .25em;
+		}
+
+		.star-icon {
+			display: flex;
+		}
+
+		.star, .starEmpty {
+			color: $gold;
+			display: inline-flex;
+			justify-content: center;
+			text-align: center;
+			width: 20px;
+		}
+
+		.reviewMeta {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			padding: 0;
+			width: 100%;
+		}
+
+		.texto-avalie {
+			height: auto;
+			margin-top: 1em;
+			margin-bottom: 2em;
+		}
+
+		.opinioesConteudo {
+			margin-bottom: 1em;
+		}
+
+		select#ddlNota {
+			font-size: 16px;
+		}
+
+		.pontosAvaliacao {
+			height: auto;
+			width: 100%;
+		}
+
+		.btAvaliar {
+			margin-top: 1em;
+			width: 100%;
+
+			button {
+				margin: 0;
+				text-transform: none;
+				width: 100%;
+			}
+		}
+
+		[itemprop="author"] {
+			color: $blue-mid;
+			font-family: $font-family-alternative;
+			font-weight: bold;
+			font-size: 16px;
+			text-transform: none;
+		}
+
+		.review {
+			align-items: center;
+			background-color: unset;
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: center;
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		blockquote {
+			border: none;
+			font-size: 16px;
+			margin-top: 1em;
+			text-transform: none;
+			width: 100%;
+		}
+
+		.reviewUser {
+			margin-left: 0;
+			margin-right: 1em;
+		}
+
+		.content-wrapper {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	.produtos-recomendados {
+		.line {
+			display: none;
+		}
+
+		.spot-sub-wrapper {
+			max-height: unset;
+		}
+
+		.products-list {
+			.slick-slider {
+				overflow: hidden;
+			}
+		}
+
+		.slick-arrow {
+			background-color: unset;
+			font-size: 0;
+		}
+
+		.precoPor {
+			display: block;
+			color: $blue-dark;
+			font-family: $font-family-alternative;
+			font-size: 1em;
+			font-weight: inherit;
+			margin-bottom: 1em;
+
+			.fbits-avista {
+				color: $blue-dark;
+				font-weight: normal;
+
+				&:after {
+					content: " no boleto";
+					color: $blue-dark;
+				}
+			}
+
+			.fbits-valor, .fbits-moeda {
+				font-size: 28px;
+				font-weight: bold;
+			}
+
+			* {
+				font-family: inherit;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.precoParcela {
+			font-weight: 200;
+		}
+	}
+}

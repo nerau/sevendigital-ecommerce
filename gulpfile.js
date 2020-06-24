@@ -15,10 +15,10 @@ gulp.task('styles', function(){
     }}))
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('assets/c/'))
+    .pipe(gulp.dest('assets/c/recursos.sevendigital.com.br/c/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('assets/c/'))
+    .pipe(gulp.dest('assets/c/recursos.sevendigital.com.br/c/'))
 });
 
 

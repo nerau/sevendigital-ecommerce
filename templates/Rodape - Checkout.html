@@ -1,0 +1,104 @@
+<footer class="footer-cart">
+	<section class="footer-seals-row">
+		<div class="footer-block">
+			<span class="block-title">Formas de pagamento</span>
+			<div class="cards-wrapper">
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_01.svg" alt="">
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_02.svg" alt="">
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_03.svg" alt="">
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_04.svg" alt="">
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_05.svg" alt="">
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_06.svg" alt="">
+				<br>
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_07.svg" alt="">
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_11.svg" alt="">
+				<img src="https://recursos.sevendigital.com.br/i/pgto/v1/cards_12.svg" alt="">
+			</div>
+		</div>
+
+		<div class="footer-block">
+			<span class="block-title">Segurança</span>
+			<div class="seals-wrapper">
+                <img src="https://recursos.sevendigital.com.br/c/selo-safety-rodape.png" alt="">
+			</div>
+		</div>
+
+		<div class="footer-block">
+			<span class="block-title">Desenvolvido por</span>
+			<div class="seals-wrapper">
+    			<a class="logo-nerau" href="https://www.nerau.com.br" target="_blank">
+            	    <img src="https://recursos.sevendigital.com.br//i/logo-nerau.svg" alt="">
+            	</a>
+				<FBITS:LogoTrayCorp corFundo="claro" />
+			</div>
+		</div>
+	</section>
+</footer>
+
+<script>
+    
+Fbits.Carrinho.Pedido.Valido = function () {
+    var resultado = true;    
+    // var tamanhoTela = 1280;
+    // $('.tyc-mensagem').html('');
+
+    if ($("ul[class='fbits-info-pessoal'] li[class='fbits-info-item']").length == 0) {
+        marcarAtivo("USUARIO");
+    
+        // if(tamanhoTela <= 1024) {
+        //     alert('Por favor, preencha seus dados de usuário');
+        // } else {
+            $('.checkout-active').append('<div class="tyc-mensagem"><div class="tyc-border-progress"></div><p class="tyc-mensagem-error">Por favor, preencha seus dados de usuário</p></div>').show("slow");
+        //}
+
+        resultado = false;
+    }
+    else if ($('#div-endereco-body div[data-selecionado="true"]').length == 0) {
+    
+        marcarAtivo("ENDERECO");
+        
+        // if(tamanhoTela <= 1024) {
+        //  alert('Por favor, selecione um endereço');
+        // } else {
+            $('.checkout-active').append('<div class="tyc-mensagem"><div class="tyc-border-progress"></div><p class="tyc-mensagem-error">Por favor, selecione um endereço</p></div>').show("slow");
+        // }
+        
+        resultado = false;   
+    }
+    else if ($('#fbits-frete-body div[class="item-frete-option selected"]').length == 0) {
+        marcarAtivo("ENVIO");
+        
+        // if(tamanhoTela <= 1024) {
+        //     alert('Por favor, selecione uma forma de envio');
+        // } else {
+            $('.checkout-active').append('<div class="tyc-mensagem"><div class="tyc-border-progress"></div><p class="tyc-mensagem-error">Por favor, selecione uma forma de envio</p></div>').show("slow");
+        // }
+
+        resultado = false;
+    }
+    else if ($('.formas-pagamento li[class="nav-item active"]').length == 0) {
+        
+        marcarAtivo("PAGAMENTO");
+        
+        // if(tamanhoTela <= 1024) {
+        //     alert('Por favor, selecione uma forma de pagamento');
+            
+        // } else {
+            $('.checkout-active').append('<div class="tyc-mensagem"><div class="tyc-border-progress"></div><p class="tyc-mensagem-error">Por favor, selecione uma forma de pagamento</p></div>').show("slow");
+        // }
+        
+        resultado = false;
+    }
+
+    return resultado;
+};
+
+$('.btfinalizar').click(function(){ 
+    $('html, body').animate({ 
+        scrollTop: $('.checkout-active').offset().top 
+    }, 1000); 
+    
+    setTimeout(function(){ $('.tyc-mensagem').hide("slow").fadeOut() }, 3500);
+});
+
+</script>

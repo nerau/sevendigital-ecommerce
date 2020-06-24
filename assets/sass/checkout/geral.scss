@@ -25,6 +25,10 @@ body {
 }
 
 ::selection {
-    background-color: $safety-orange;
+    background-color: $brand-orange;
     color: #fff;
+}
+
+html {
+	transition: .3s ease;
 }

@@ -1,0 +1,85 @@
+<div class="page-produto">
+    <div class="container">
+        <FBITS:BreadCrumb  />
+        @*Microdata de produto*@
+        <!--Div id="produto-item-@itemId" deve ser mantida por motivos estruturarais da plataforma.-->
+        <div class="detalhe-produto">
+            <div class="row" id="produto-item-@itemId">
+                <div class="col-lg-7 col-figure">
+                    <div id="imagem-pagina-produto">
+                        <FBITS:Etiqueta tipo="sequencial" />
+                        <div class="images-wrapper">
+                            <ul class="main-image"></ul>
+                            <ul class="thumbnails"></ul>
+                            <div class="slick-controls"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="title-wrapper">
+                        <div class="review-and-category">
+                            <FBITS:Avaliacao  />
+                            <FBITS:CategoriaPrincipal link="true" />
+                        </div>
+                        <FBITS:AdicionarListaDesejos texto="Adicionar à lista de desejos" textoAdicionado="Adicionado à lista de desejos" />
+                        <FBITS:Nome  />             
+                        <FBITS:Sku  />
+                    </div>
+                    <!--Opções de escolha de atributos.-->
+                    <FBITS:MatrizAtributos  />
+                    <FBITS:EscolhaAtributos  />
+                    <!--Opções de parcelamento e frete.-->
+                    <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Boleto" ultimaParcela="true"/>
+                    <FBITS:ParcelamentoFormaPagamento nomeFormaPagamento="Cartão" ultimaParcela="true"/>
+                    <!--##Coluna 3.-->
+                    <FBITS:ProdutoVariante  />
+
+                    <FBITS:CalculaFrete tipoexibicao="aberto" /> 
+                </div>
+            </div>      
+        </div>
+        <section class="section-compre-junto">
+            <FBITS:CompreJunto tipo="Produto" />
+        </section>
+        <div class="informacoes-produto">
+            <ul class="info-group"></ul>
+            <div class="js-content" style="display: none">
+                <FBITS:GrupoInformacao />
+            </div>
+        </div>
+        <div class="reviews-wrapper">
+
+            <h3 class="section-title">Avaliações e Opiniões</h3>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="content-wrapper">
+                        <div class="nota-geral"></div>
+
+                        <FBITS:Avaliacoes titulo="Avaliações e Opiniões" />
+
+                        <a href="javascript:;" class="toggle-avaliar">Deixar uma avaliação</a>
+
+                        <div class="make-review-wrapper">
+                            <FBITS:Avaliar />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <section class="produtos-recomendados" style="display: none;">
+            <h3 class="section-title">Quem comprou este produto, também comprou: </h3>
+
+            <div class="products-list is-slider">
+                <div id="fbits-grupo-pagina"></div>
+                <div class="slick-controls"></div>
+            </div>
+
+            <div class="js-content" style="display: none;">
+                <FBITS:Carrossel tipo="similar" /> 
+            </div>
+        </section>
+    </div>
+</div>
+
+@Html.RecursosJS("fbits.produto.calculafrete.js", "jquery.maskedinput-1.3.min.js")

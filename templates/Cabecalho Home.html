@@ -1,0 +1,92 @@
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="640">
+<meta name="viewport" content="initial-scale = 1, maximum-scale = 1, user-scalable = no">
+
+
+<header>
+    <div class="informativos-topo">
+        <div class="container">        
+            <span class="item item-entrega">Entrega para todo o Brasil</span>
+            <span class="item item-juros">Até 10x sem juros</span>
+            <span class="item item-desconto">10% de desconto no boleto</span>
+            <span class="item item-retirar">Retirar na loja</span>
+        </div>
+    </div>
+    <div class="nav-links">
+        <div class="container">
+            <div class="login">
+                @FBITSLogin.Add()
+                <a href="https://checkout.sevendigital.com.br/MinhaConta/Pedido/">Meus pedidos</a>
+                <a href="/atendimento">Atendimento</a>
+            </div>
+            <a href="/ListaDeDesejos" class="lista-desejos">Lista de Desejos</a>
+            <div class="cart-link-wrapper featured-link">
+                @FBITSCarrinho.Add()
+            </div>
+        </div>
+    </div>
+    <div class="main-nav-content">
+        <a href="#" class="burger-toggle">
+            <span class="burger-icon"></span>
+        </a>
+        <FBITS:Logo />
+        <div class="search-bar-wrapper">
+            @FBITSSearch.Add()
+        </div>
+        <div class="contact-call">
+            <span class="title">Alguma dúvida?</span>
+            <div class="infos-wrapper">
+                <div class="item-wrapper email-wrapper">
+                    <span class="title">Email: </span><br>
+                    <a class="email" href="mailto:atendimento@sevendigital.com.br">atendimento@sevendigital.com.br</a>
+                </div>
+                <div class="item-wrapper whatsapp-wrapper">
+                    <span class="title"> Whastapp:</span><br>
+                    <a href="https://wa.me/5547999951119" target="_blank">(47) 9 9995-1119</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-icons">
+            <a href="" class="search-icon search-toggle"></a>
+            <a href="https://checkout.sevendigital.com.br/" class="cart-icon"></a>
+        </div>
+    </div>
+
+    <nav class="main-category-nav">
+        @{Html.RenderAction("MenuTopo", "Menu");}
+    </nav>
+
+    <div class="menu-mobile">
+        <div class="head-menu">
+            <a href="#" class="burger-toggle">
+                <span class="burger-icon"></span>
+            </a>
+            <FBITS:Logo />
+        </div>
+        <div class="content-wrapper">
+            <div id="category-menu">
+                @{Html.RenderAction("MenuTopo", "Menu");}
+            </div>
+        </div>
+        <div class="foot-menu">
+            <div class="infos-wrapper">
+                <div class="item-wrapper email-wrapper">
+                    <span class="title">Email: </span> 
+                    <a class="email" href="mailto:atendimento@sevendigital.com.br">atendimento@sevendigital.com.br</a>
+                </div>
+                <div class="item-wrapper whatsapp-wrapper">
+                    <span class="title"> Whastapp:</span> 
+                    <a href="https://wa.me/5547999951119" target="_blank">(47) 9 9995-1119</a>
+                </div>
+            </div>
+            <div class="links">
+                <a href="https://checkout.sevendigital.com.br/Login/Authenticate" class="account-icon"></a>
+                <a href="/ListaDeDesejos" class="lista-desejos-icon"></a>
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+    let q = document.querySelectorAll('.menu'), qLength = q.length;
+    for (var a = 0; a < qLength; a++) {q[a].classList = 'menu-category'};
+</script>

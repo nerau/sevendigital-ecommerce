@@ -1,0 +1,32 @@
+<script>
+    $(function(){
+        // Ajusta hero
+        const pageRef = $('.page-institucional'),
+            heroRef = pageRef.find('.hero-institucional'),
+            heroJsRef = pageRef.find('heroatendimento');
+
+        if (heroJsRef.length) {
+            let title = heroJsRef.attr('titulo'),
+                image = heroJsRef.attr('background'),
+                titleTemplate = `<h2 class="hero-title">${title}</h2>`;
+
+            heroRef.attr('style', `background-image: url(${image});`);
+            heroRef.find('.hero-content').append(titleTemplate);
+        }
+
+
+            // <heroatendimento titulo="Sobre a Seven Digital" background="https://recursos.sevendigital.com.br/i/hero-atendimento.jpg"></heroatendimento>
+    })
+</script>
+
+<div class="page-atendimento page-institucional">
+
+    <section class="hero-institucional" style="background-image: url(https://recursos.sevendigital.com.br/i/hero-atendimento.jpg);">        
+        <div class="hero-content container">
+        </div>
+    </section>
+
+    <section class="container">
+        <FBITS:Conteudo filtroPosicao="centro" idsConteudos="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" />
+    </section>
+</div>

@@ -1,0 +1,166 @@
+.fbits-geral {
+	.listadesejos {
+		display: flex !important;
+		flex-direction: column;
+
+		#ContinuarComprando {
+			@extend .custom-btn, .btn-orange;
+		}
+		
+
+		.precoPor, .precoDe {
+			color: #000;
+		}
+
+		.precoPor {
+			color: $blue-dark;
+			font-size: 21px;
+			font-weight: bold;
+		}
+
+		.precoPor.com-precoDe {
+
+			&:before {
+				color: $blue-mid;
+				font-size: .8em;
+			}
+		}
+
+		.precoDe {
+			color: $gray-mid;
+			font-size: 14px;
+			font-weight: normal;
+		}
+
+		[id^="view-item-quantidade-"] {
+			margin-bottom: 1em;
+
+			.fbits-titulo-quantidade {
+				font-size: 16px;
+				display: inline-block;
+				text-transform: none;
+			}
+
+			select {
+				display: inline-block !important;
+				margin: 0 !important;
+			}
+		}
+
+
+		.headerTabela {
+			display: flex !important;
+
+			@media (max-width: 767px) {
+				display: none !important;
+			}
+
+			th:nth-child(2){
+				order: 1;
+			}
+		}
+
+		.produtosListaDesejos {
+			display: flex !important;
+			flex-wrap: wrap;
+		}
+
+		table#tbItensListaDesejo tbody#tbdListaDeDesejos tr.produtosListaDesejos td.remover {
+			order: 1;
+
+			@media (max-width: 767px) {
+				border: none;
+				order: -1;
+				width: 100% !important;	
+			}
+
+			.remover {
+				@media (max-width: 767px) {
+					margin-right: 1em;
+				}
+			}
+		}
+
+		table#tbItensListaDesejo tbody#tbdListaDeDesejos tr td.cartProd {
+			border: none;
+			@media (max-width: 767px) {
+				display: block !important;
+				padding: 1em;
+				width: 50% !important;
+			}
+
+			@media (max-width: 576px) {
+				width: 100% !important;
+			}
+		}
+
+		table#tbItensListaDesejo tbody#tbdListaDeDesejos tr.produtosListaDesejos td[id^="produto-comprar-"] {
+			@media (max-width: 767px) {
+				padding: 1em;
+				width: 100% !important;
+			}
+
+			input[id^="comprar"] {
+				
+				@extend .custom-btn, .btn-orange;
+
+				@media (max-width: 767px) {
+					font-size: 14px;
+					width: 100% !important;
+				}
+			}
+		}
+
+		table#tbItensListaDesejo tbody#tbdListaDeDesejos tr td[id^="produto-dados-variante"] {
+			@media (max-width: 767px) {
+				padding: 1em;
+				width: 50% !important;
+			}
+
+			@media (max-width: 576px) {
+				width: 100% !important;
+			}
+		}
+
+
+		.cartNome {
+			color: #000;
+			font-size: 18px !important;
+			// font-weight: bold;
+			text-transform: none;
+
+			@media (max-width: 767px) {
+				font-size: 15px !important;
+			}
+		}
+
+		table#tbItensListaDesejo tbody#tbdListaDeDesejos tr.produtosListaDesejos td.preco {
+			@media (max-width: 767px) {
+				border: none;
+				margin-left: auto;
+				width: 50% !important;
+			}
+
+			@media (max-width: 576px) {
+				width: 100% !important;
+			}
+		}
+
+		select[id^="item-quantidade"] {
+		    border-radius: 0;
+		    background-color: #fff;
+		    color: #9b9b9b;
+			display: block;
+			font-size: 14px;
+		    margin: auto;
+		    margin-left: .5em !important;
+		    margin-bottom: 1em;
+		    min-width: 70px;
+		}
+
+		#todos-comprar {
+			
+			@extend .custom-btn, .btn-orange;
+		}
+	}
+}

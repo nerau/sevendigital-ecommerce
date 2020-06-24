@@ -9,3 +9,310 @@
 
 @import "../base/variables";
 @import "../base/mixins";
+@import "../libs/bootstrap";
+@import "../components/buttons";
+
+//Estilos gerais
+
+.my_address_list {
+    .btn-primary.sel {
+        background-color: $brand-orange !important;
+        position: relative !important;
+
+        &:after {
+            content: "Editar";
+        }
+
+        &:before {
+            background-color: lighten($brand-orange, 15%) !important;
+            content: "" !important;
+        }
+    }
+
+    li:last-child a:first-child {
+
+    }
+}
+
+input[type=text], input[type=email], input[type=date], input[type=password], input[type=number], input[type=tel] {
+	color: $body-color !important;
+	font-family: $font-family-base !important;
+}
+
+.switch-field input:checked+label {
+	background-color: $brand-orange !important;
+	color: #fff !important;
+}
+
+input[type=submit] {
+	background-color: $brand-orange !important;
+	border: none !important;
+	color: #fff !important;
+	font-family: $font-family-base !important;
+	transition: .3s ease-in-out;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: lighten($brand-orange, 25%) !important;
+		opacity: 1 !important;
+	}
+}
+
+.minhaconta .sideBar .filtroPai, .minhaconta .sideBar .filtros .title ,label {
+	font-family: $font-family-base !important;
+}
+
+.minhaconta .sideBar .filtros ul {
+	float: none;
+}
+
+
+
+#menu-minha-conta .filtroPai {
+	margin-top: 2em;
+}
+
+.minhaconta .sideBar .filtros .title .icon {
+	@media (max-width: 992px) {
+		background: 0 0;
+		display: block;
+		outline: 0;
+		border: none;
+	}
+}
+
+.fbits-btn-show-password {
+	display: none !important;
+}
+
+
+/*Login*/
+
+.fbits-social-login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.fbits-social-login button {
+  margin: 0 0 10px !important;
+}
+
+.fbits-box-login button.btn-success, .btn-primary{
+   	@extend .custom-btn, .btn-orange;
+}
+
+
+.minhaconta {
+
+///Tudo aqui dentro é fix das telas do minha conta
+    overflow: hidden;
+
+    .center {
+        max-width: 1230px;
+        @extend .container;
+        padding-left: $grid-gutter-width/2;
+        padding-right: $grid-gutter-width/2;
+    }
+
+    #cotacao-jaimito {
+        display: none;
+        
+    }
+    
+    .forminline {
+        @media (max-width: 768px) {
+            padding: 0;
+        }
+    }
+
+
+    .sideBar .filtroFilho li a.sel  {
+        border-color: $blue-mid !important;
+        color: $blue-mid !important;
+    }
+
+    .sideBar .filtroPai {
+        color: #000 !important;
+    }
+
+    .center {
+        padding-top: 2em;
+    }
+
+    h3 {
+        margin-bottom: 1em;
+    }
+
+    .minhaconta-dados-pedido {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .fbits-minha-conta-detalhe-pedido {
+        >.row {
+            margin: 0;
+        }
+
+        .title-interna {
+            padding: 1em;
+
+        }
+    }
+
+    .fbits-btn-ver-pedido-completo {
+        @extend .custom-btn, .btn-orange;
+        margin-top: 1em;
+        white-space: normal;
+        width: 100%;
+
+        &:hover, &:active {
+        	text-decoration: none;
+        }
+    }
+
+    .fbits-minha-conta-detalhe-pedido .minhaconta-dados-pedido {
+        margin-top: 1em;
+        padding: 0;
+    }
+
+    .sideBar {
+        @media (max-width: 992px) {
+            margin-bottom: 2em;
+            width: 100%;
+        }
+    }
+
+    .fbtn.fbtn-green.sel, .fbtn.fbtn-blue {
+       @extend .custom-btn, .btn-orange;
+       height: 100%;
+       width: 100%;
+    }
+
+    .gateway-yapay-imprirmir-boleto {
+        @extend .custom-btn, .btn-orange;
+    }
+
+    [data-gateway-acao="undefined"] {
+        display: none;
+    }
+
+    .minhaconta-produtos-pedido {
+        border: 1px solid #ddd !important;
+        margin: 1em 15px;
+        max-width: calc(100% - 30px);
+    }
+
+    .fbits-minhaconta-btn-details {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .fbits-minha-conta-detalhe-pedido .minhaconta-dados-pedido {
+        >div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    .fbits-minha-conta-detalhe-pedido .minhaconta-produtos-pedido {
+        margin: 1em 0 0;
+        max-width: 100%;
+
+        @media (max-width: 992px) {
+            padding: 0;
+
+            .minha-conta-produtos {
+                margin: 0;
+
+                >* {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .minhaconta-endereco-pedido {
+        flex: 100%;
+        margin-top: 1em;
+        max-width: 100%;
+        padding: 0 15px !important;
+
+        #gateway-painel {
+            margin-top: 1em;
+        }
+    }
+
+    .fbits-minha-conta-detalhe-pedido .minhaconta-endereco-pedido {
+        padding: 0 !important;
+    }
+
+    .detalhe-nome {
+        min-width: unset !important;
+    }
+
+    .detalhe-img {
+        padding: 0;
+    }
+
+    .detalhe-status {
+        padding: 0;
+    }
+
+    .fbits-minha-conta-detalhe-pedido .minha-conta-produtos {
+        margin: 0;
+
+        ~ .row {
+            padding-left: $grid-gutter-width/2;
+            padding-right: $grid-gutter-width/2;
+        }
+    }
+
+    .mainBarInterna {
+        max-width: 73%;
+
+        @media (max-width: 992px) {
+            max-width: 100%;
+        }
+
+        #fbits-minhaconta .container-fluid {
+            padding: 0;
+        }
+
+        .fbits-gateway-painel {
+            width: 100%;
+        }
+    }
+}
+
+.full-container {
+	margin: auto;
+	font-family: $font-family-alternative;
+
+	.btn-success {
+		@extend .custom-btn, .btn-orange;
+		background-color: $brand-orange;
+		color: #fff;
+	}
+
+	.fbits-social-login {
+		display: flex;
+		flex-direction: column;
+
+		> * {
+			flex: 1;
+			margin-bottom: 1em;
+			margin-right: 0;
+			margin-left: 0;
+			width: 100%;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+}
+

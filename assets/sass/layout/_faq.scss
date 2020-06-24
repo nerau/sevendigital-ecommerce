@@ -56,8 +56,8 @@
 	    width: 100%;
 
 	    &:focus, &:not(:placeholder-shown) {
-	    	border-color: $safety-orange;
-	    	color: $safety-orange;
+	    	border-color: $brand-orange;
+	    	color: $brand-orange;
 	    }
 
 	}
@@ -100,9 +100,9 @@
 
 		.pergunta {
 			align-items: center;
-			background-color: $safety-orange;
-			border-bottom: 1px solid lighten($safety-orange, 10%);
-			color: $papaya-whip;
+			background-color: $brand-orange;
+			border-bottom: 1px solid lighten($brand-orange, 10%);
+			color: $gray;
 			cursor: pointer;
 			display: flex;
 			font-weight: bold;
@@ -135,7 +135,7 @@
 		}
 
 		.resposta {
-			background-color: lighten($safety-orange, 40%);
+			background-color: lighten($brand-orange, 40%);
 			display: none;
 		}
 	}

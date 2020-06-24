@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/* LEIA-ME */
+/* login.css >> DefiniÃ§Ãµes das pÃ¡ginas de LOGIN do novo Checkout */
+/* minhaconta.css >> DefiniÃ§Ãµes das pÃ¡ginas de MINHA CONTA do novo Checkout */
+/* checkout.css >> DefiniÃ§Ãµes das pÃ¡ginas de CARRINHO, FECHAMENTO E CONFIRMAÃ‡ÃƒO do novo Checkout */
+/* geral.css >> DefiniÃ§Ãµes de CabeÃ§alho e RodapÃ© */
+/* adicione/edite este arquivo para sobrescrever as definiÃ§Ãµes padrÃ£o da loja */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #dc3545;
+            box-shadow: 0 0 0 0 #dc3545; }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+            box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); } }
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #dc3545;
+            box-shadow: 0 0 0 0 #dc3545; }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+            box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); } }
+
+.custom-btn, .fbits-social-login a[href="/Login/Authenticate"], .fbits-box-login .btn.btn-success, .cadastroUsuario .btn-primary, .listadesejos #btnContinuarComprando, .fbits-confirmacao .gateway-yapay-imprirmir-boleto, .fbits-confirmacao .confirmacao-buttons .btcontinuar, .fbits-confirmacao .confirmacao-buttons .btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #FF9933;
+  color: #FF9933;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Lato";
+  font-weight: 200;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1em;
+  text-align: center;
+  -webkit-transition: .2s ease;
+  transition: .2s ease; }
+  .custom-btn:hover, .fbits-social-login a:hover[href="/Login/Authenticate"], .fbits-box-login .btn.btn-success:hover, .cadastroUsuario .btn-primary:hover, .listadesejos #btnContinuarComprando:hover, .fbits-confirmacao .gateway-yapay-imprirmir-boleto:hover, .fbits-confirmacao .confirmacao-buttons .btcontinuar:hover, .fbits-confirmacao .confirmacao-buttons .btn:hover {
+    background-color: #FF9933;
+    color: #fff; }
+  .custom-btn.btn-orange, .fbits-social-login a.btn-orange[href="/Login/Authenticate"], .fbits-social-login .cadastroUsuario a.btn-primary[href="/Login/Authenticate"], .cadastroUsuario .fbits-social-login a.btn-primary[href="/Login/Authenticate"], .fbits-box-login .btn.btn-success, .cadastroUsuario .btn-primary, .listadesejos #btnContinuarComprando, .fbits-confirmacao .btn-orange.gateway-yapay-imprirmir-boleto, .fbits-confirmacao .confirmacao-buttons .btcontinuar, .fbits-confirmacao .confirmacao-buttons .btn {
+    background-color: #FF9933;
+    color: #fff;
+    font-weight: normal;
+    height: auto;
+    line-height: 1.3; }
+    .custom-btn.btn-orange:hover, .fbits-social-login a.btn-orange:hover[href="/Login/Authenticate"], .fbits-box-login .btn.btn-success:hover, .cadastroUsuario .btn-primary:hover, .listadesejos #btnContinuarComprando:hover, .fbits-confirmacao .btn-orange.gateway-yapay-imprirmir-boleto:hover, .fbits-confirmacao .confirmacao-buttons .btcontinuar:hover, .fbits-confirmacao .confirmacao-buttons .btn:hover {
+      background-color: #e67300; }
+  .custom-btn.btn-blue, .fbits-social-login a.btn-blue[href="/Login/Authenticate"], .fbits-box-login .btn-blue.btn.btn-success, .cadastroUsuario .btn-blue.btn-primary, .listadesejos .btn-blue#btnContinuarComprando, .fbits-confirmacao .btn-blue.gateway-yapay-imprirmir-boleto, .fbits-confirmacao .confirmacao-buttons .btn-blue.btcontinuar, .fbits-confirmacao .confirmacao-buttons .btn-blue.btn {
+    background-color: #009EF0;
+    border-color: #009EF0;
+    color: #fff;
+    font-weight: normal;
+    padding: .75em 1em; }
+    .custom-btn.btn-blue:hover, .fbits-social-login a.btn-blue:hover[href="/Login/Authenticate"], .fbits-box-login .btn-blue.btn.btn-success:hover, .cadastroUsuario .btn-blue.btn-primary:hover, .listadesejos .btn-blue#btnContinuarComprando:hover, .fbits-confirmacao .btn-blue.gateway-yapay-imprirmir-boleto:hover, .fbits-confirmacao .confirmacao-buttons .btn-blue.btcontinuar:hover, .fbits-confirmacao .confirmacao-buttons .btn-blue.btn:hover {
+      background-color: #006ca4;
+      border-color: #006ca4; }
+  .custom-btn.btn-green, .fbits-social-login a.btn-green[href="/Login/Authenticate"], .fbits-box-login .btn-green.btn.btn-success, .cadastroUsuario .btn-green.btn-primary, .listadesejos .btn-green#btnContinuarComprando, .fbits-confirmacao .btn-green.gateway-yapay-imprirmir-boleto, .fbits-confirmacao .confirmacao-buttons .btn-green.btcontinuar, .fbits-confirmacao .confirmacao-buttons .btn-green.btn {
+    background-color: #22BC21;
+    border-color: #22BC21;
+    color: #fff;
+    font-weight: normal;
+    padding: .75em 1em; }
+    .custom-btn.btn-green:hover, .fbits-social-login a.btn-green:hover[href="/Login/Authenticate"], .fbits-box-login .btn-green.btn.btn-success:hover, .cadastroUsuario .btn-green.btn-primary:hover, .listadesejos .btn-green#btnContinuarComprando:hover, .fbits-confirmacao .btn-green.gateway-yapay-imprirmir-boleto:hover, .fbits-confirmacao .confirmacao-buttons .btn-green.btcontinuar:hover, .fbits-confirmacao .confirmacao-buttons .btn-green.btn:hover {
+      background-color: #167b16;
+      border-color: #167b16; }
+  .custom-btn.adicionar, .fbits-social-login a.adicionar[href="/Login/Authenticate"], .fbits-box-login .adicionar.btn.btn-success, .cadastroUsuario .adicionar.btn-primary, .listadesejos .adicionar#btnContinuarComprando, .fbits-confirmacao .adicionar.gateway-yapay-imprirmir-boleto, .fbits-confirmacao .confirmacao-buttons .adicionar.btcontinuar, .fbits-confirmacao .confirmacao-buttons .adicionar.btn {
+    font-size: 0; }
+    .custom-btn.adicionar:before, .fbits-social-login a.adicionar[href="/Login/Authenticate"]:before, .fbits-box-login .adicionar.btn.btn-success:before, .cadastroUsuario .adicionar.btn-primary:before, .listadesejos .adicionar#btnContinuarComprando:before, .fbits-confirmacao .adicionar.gateway-yapay-imprirmir-boleto:before, .fbits-confirmacao .confirmacao-buttons .adicionar.btcontinuar:before, .fbits-confirmacao .confirmacao-buttons .adicionar.btn:before {
+      color: currentColor;
+      content: "\f07a";
+      font-size: 16px;
+      font-family: "Font Awesome 5 Pro";
+      font-weight: bold; }
+
+.btn {
+  border-radius: 0; }
+
+.btn.facebook {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  width: 100%; }
+  .btn.facebook:hover {
+    background-color: #416bb7;
+    color: #fff; }
+  .btn.facebook i {
+    margin-right: 1em; }
+  .btn.facebook i:before {
+    content: "\f082";
+    font-family: "Font Awesome 5 Brands";
+    font-size: 20px; }
+
+.btn.google {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  width: 100%; }
+  .btn.google:hover {
+    background-color: #dc453a;
+    color: #fff; }
+  .btn.google i {
+    margin-right: 1em; }
+  .btn.google i:before {
+    content: "\f2b3";
+    font-family: "Font Awesome 5 Brands";
+    font-size: 20px; }
+
+.btn.cadastro {
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  width: 100%; }
+  .btn.cadastro:hover {
+    background-color: #A8A8A8;
+    border-color: #A8A8A8;
+    color: #fff; }
+
+.fbits-social-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 0 30px; }
+  .fbits-social-login > * {
+    margin: 0;
+    margin-bottom: 1em;
+    text-transform: none; }
+  .fbits-social-login a[href="/Login/Authenticate"] {
+    border-color: #A8A8A8;
+    color: #A8A8A8;
+    font-weight: normal; }
+    .fbits-social-login a[href="/Login/Authenticate"]:hover {
+      background-color: #A8A8A8;
+      color: #fff; }
+
+.fbits-box-login .fbits-social-login {
+  padding: 0; }
+
+.fbits-link-senha {
+  color: #0088ff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease; }
+  .fbits-link-senha:hover {
+    opacity: .5; }
+
+.fbits-login a[onclick="window.history.back()"] {
+  text-align: center; }
+
+.listadesejos #btnContinuarComprando {
+  text-decoration: none; }
+
+body.fbits-confirmacao {
+  padding: 0; }
+
+#fbits-mensagem-fechamento > div {
+  -webkit-box-shadow: 0px 0 39px 0px rgba(0, 0, 0, 0.15) !important;
+          box-shadow: 0px 0 39px 0px rgba(0, 0, 0, 0.15) !important; }
+
+#fbits-mensagem-fechamento h3 {
+  color: #000 !important;
+  font-family: "Open Sans";
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  margin-top: 0; }
+
+#fbits-mensagem-fechamento span {
+  font-size: 16px !important;
+  font-family: "Open Sans"; }
+
+.fbits-frete-retirada-texto {
+  margin: 10px; }
+
+.fbits-frete-retirada-mais {
+  background-color: #E1E1E1;
+  border-color: #E1E1E1;
+  border-bottom-width: 2px;
+  color: #4A4A4A;
+  margin-left: 10px !important;
+  padding: .5em 3em;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out; }
+  .fbits-frete-retirada-mais:hover {
+    background-color: #dadada !important;
+    border-color: #E1E1E1 !important; }
+
+.fbits-confirmacao {
+  overflow-x: hidden; }
+  .fbits-confirmacao:before, .fbits-confirmacao:after {
+    display: none; }
+  .fbits-confirmacao > .tyc_container > .row {
+    margin: 0; }
+  .fbits-confirmacao section.confirmacao-entrega p, .fbits-confirmacao section.confirmacao-itens:before, .fbits-confirmacao .confirmacao-box .box-pedido-numero:first-child:before {
+    font-weight: bold; }
+  .fbits-confirmacao .fbits-responsive-carrinho-item-valor-unitario {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.5em;
+    font-weight: 200 !important; }
+  .fbits-confirmacao .fbits-responsive-carrinho-item-quantidade {
+    margin-top: 1em; }
+  .fbits-confirmacao .box-endereco {
+    font-weight: 200;
+    font-size: 1em; }
+    .fbits-confirmacao .box-endereco .pedido-endereco-endereco:before {
+      color: #aaa; }
+  .fbits-confirmacao .gateway-yapay-imprirmir-boleto {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1em;
+    text-align: center;
+    width: 100%; }
+    .fbits-confirmacao .gateway-yapay-imprirmir-boleto:before {
+      background-color: #777 !important; }
+  .fbits-confirmacao .gateway-yapay-copiar-linecode {
+    width: 100%; }
+    .fbits-confirmacao .gateway-yapay-copiar-linecode input {
+      border: none;
+      text-align: center;
+      width: 100%; }
+  .fbits-confirmacao .fbits-responsive-carrinho-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 15px; }
+    .fbits-confirmacao .fbits-responsive-carrinho-item .fbits-responsive-carrinho-item-valor-unitario {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+      @media (max-width: 500px) {
+        .fbits-confirmacao .fbits-responsive-carrinho-item .fbits-responsive-carrinho-item-valor-unitario .currency {
+          font-size: 16px; } }
+    @media (min-width: 768px) {
+      .fbits-confirmacao .fbits-responsive-carrinho-item {
+        margin: 0; } }
+    .fbits-confirmacao .fbits-responsive-carrinho-item > * {
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2; }
+    .fbits-confirmacao .fbits-responsive-carrinho-item .fbits-responsive-carrinho-item-titulo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 2;
+          -ms-flex: 2;
+              flex: 2; }
+      @media (max-width: 500px) {
+        .fbits-confirmacao .fbits-responsive-carrinho-item .fbits-responsive-carrinho-item-titulo {
+          font-size: 16px; } }
+  .fbits-confirmacao .fbits-responsive-carrinho-item-descricao {
+    font-weight: bold;
+    text-transform: uppercase; }
+  .fbits-confirmacao .fbits-responsive-carrinho-item-atributos {
+    font-size: 1em;
+    text-transform: none;
+    font-weight: 200; }
+  .fbits-confirmacao section.confirmacao-box {
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 40px;
+    width: 100%; }
+    @media (max-width: 500px) {
+      .fbits-confirmacao section.confirmacao-box {
+        padding: 20px; } }
+    .fbits-confirmacao section.confirmacao-box .confirmacao-box {
+      margin-bottom: 0; }
+      @media (max-width: 500px) {
+        .fbits-confirmacao section.confirmacao-box .confirmacao-box {
+          border: none;
+          padding: 0; } }
+  .fbits-confirmacao #bannerEbit {
+    display: block;
+    margin: 15px auto; }
+    .fbits-confirmacao #bannerEbit img {
+      display: block;
+      margin: auto;
+      max-width: 100%; }
+  .fbits-confirmacao .confirmacao-box {
+    margin-bottom: 0; }
+  .fbits-confirmacao .box-pedido-numero + .box-pedido-numero {
+    position: relative; }
+  .fbits-confirmacao .title-confirmacao {
+    color: #009EF0;
+    padding: 1em 0;
+    text-align: center; }
+  .fbits-confirmacao .confirmacao-itens, .fbits-confirmacao .confirmacao-entrega {
+    margin: 0 30px 0 0; }
+    @media (max-width: 992px) {
+      .fbits-confirmacao .confirmacao-itens, .fbits-confirmacao .confirmacao-entrega {
+        margin: 0;
+        width: 100%; } }
+  .fbits-confirmacao .confirmacao-entrega {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0; }
+  .fbits-confirmacao .confirmacao-itens {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2; }
+    @media (max-width: 992px) {
+      .fbits-confirmacao .confirmacao-itens {
+        -webkit-box-flex: 100%;
+            -ms-flex: 100%;
+                flex: 100%;
+        margin-bottom: 30px; } }
+    .fbits-confirmacao .confirmacao-itens .fbits-responsive-carrinho-item:last-child {
+      border: none !important; }
+  .fbits-confirmacao section.confirmacao-box, .fbits-confirmacao section.confirmacao-entrega, .fbits-confirmacao section.confirmacao-itens {
+    min-height: auto; }
+  .fbits-confirmacao .confirmacao-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 30px 0;
+    width: 100%; }
+    @media (max-width: 768px) {
+      .fbits-confirmacao .confirmacao-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+    .fbits-confirmacao .confirmacao-buttons .btcontinuar, .fbits-confirmacao .confirmacao-buttons .btn {
+      color: #fff !important;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      font-weight: normal !important;
+      text-decoration: none !important;
+      width: auto !important; }
+      .fbits-confirmacao .confirmacao-buttons .btcontinuar:hover, .fbits-confirmacao .confirmacao-buttons .btn:hover {
+        background-color: #e67300 !important;
+        opacity: 1 !important; }
+    @media (max-width: 567px) {
+      .fbits-confirmacao .confirmacao-buttons a {
+        padding: 1.5em 2em; } }
+    @media (max-width: 768px) {
+      .fbits-confirmacao .confirmacao-buttons a:first-child {
+        margin-bottom: 30px; } }
+  .fbits-confirmacao .content-flex-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 30px; }
+    @media (max-width: 992px) {
+      .fbits-confirmacao .content-flex-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+  .fbits-confirmacao ul {
+    list-style: none; }

@@ -1,0 +1,146 @@
+<script>
+    $(function(){
+        //Ajusta hero
+        // const heroRef = $('.page-atendimento .hero-institucional'),
+        //     heroJsRef = heroRef.find('.js-hero-content heroatendimento');
+
+        // if (heroJsRef.length) {
+        //     let title = heroJsRef.attr('titulo'),
+        //         image = heroJsRef.attr('background'),
+        //         titleTemplate = `<h2 class="hero-title">${title}</h2>`;
+
+        //     heroRef.attr('style', `background-image: url(${image});`);
+        //     heroRef.find('.hero-content').append(titleTemplate);
+        // }
+    })
+</script>
+
+<div class="page-atendimento">
+
+    <section class="hero-institucional" style="background-image: url(https://recursos.sevendigital.com.br/i/hero-atendimento.jpg);">        
+        <div class="hero-content container">
+            <h2 class="hero-title">Atendimento</h2>
+        </div><!-- 
+        <div class="js-hero-content" style="display: none">
+            <heroatendimento titulo="Atendimento" background="https://placehold.jp/1920x450.png"></heroatendimento>
+        </div> -->
+    </section>
+
+    <div class="infos-blocks container">
+        <div class="section-title-wrapper">
+            <h3 class="section-title">Fale conosco</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6 block-col">
+                <div class="content-wrapper">
+                    <div class="wrapper">
+                        <h4 class="info-title">Chat Online</h4>
+                        <p class="basic-text">
+                            8h30 às 18h <br>
+                            Horário de Brasília <br>
+                            de segunda a sexta-feira <br>
+                            Exceto feriados
+                        </p>
+                    </div>
+                    <div class="wrapper">
+                        <a href="javascript:jivo_api.open();" class="custom-btn btn-blue chat">Iniciar chat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 block-col whatsapp-block">
+                <div class="content-wrapper">
+                    <div class="wrapper">
+                        <h4 class="info-title">Whatsapp</h4>
+                        <p class="basic-text">
+                            Entre em contato <br>
+                            Por Whatsapp. Falaremos <br>
+                            com você assim que possível. <br>
+                        </p>
+                    </div>
+                    <div class="wrapper">
+                        <a href="https://wa.me/5547999951119" target="_blank" class="custom-btn btn-green">Enviar mensagem</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 block-col">
+                <div class="content-wrapper">
+                    <div class="wrapper">
+                        <h4 class="info-title">Telefones</h4>
+                        <p class="basic-text">
+                            8h30 às 18h <br>
+                            Horário de Brasília <br>
+                            de segunda a sexta-feira <br>
+                            Exceto feriados
+                        </p>
+                    </div>
+                    <div class="wrapper">
+                        <span class="phone">(11) 3346-9966</span>
+                        <span class="phone">0800 775 2586</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 block-col email-block">
+                <div class="content-wrapper">
+                    <div class="wrapper">
+                        <h4 class="info-title">E-mail</h4>
+                        <p class="basic-text">
+                            Entre em contato <br>
+                            Por e-mail. Responderemos <br>
+                            Assim que possível.
+                        </p>
+                    </div>
+                    <div class="wrapper">
+                        <a href="mailto:atendimento@sevendigital.com.br" class="custom-btn btn-blue email">Escreve e-mail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="faq-section container">
+        <div class="section-title-wrapper">
+            <h3 class="section-title">Duvidas frequentes</h3>
+        </div>
+        <div class="content-wrapper">
+            <div class="col-lg-3 tabs-col"></div>
+            <div class="offset-lg-1 col-lg-7">
+                <div class="content-list-wrapper" style="display: none">
+                    <ul class="content-list"></ul>
+                </div>
+                <div class="empty-content">
+                    <div class="wrapper">
+                        <p>Escolha um dos <br> tópicos ao lado ou fale <br> com a gente agora <br> mesmo.</p>
+                        <a href="javascript:jivo_api.open();" class="custom-btn btn-blue chat">Iniciat chat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="js-content" style="display: none">
+            <FBITS:Conteudo filtroPosicao="centro" idsConteudos="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" />
+        </div>
+    </section>
+    
+    <section class="map-section container">
+
+        <div class="section-title-wrapper">
+            <h3 class="section-title">Faça uma visita</h3>
+        </div>
+
+        <div class="map-wrapper">
+            <div id="mapa"></div>
+        </div>
+        <div class="infos">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 offset-md-1">
+                    <span class="info-title">Endereço</span>
+                    <p>Rua Comandante Frederico Stool, <br> Nº 46 - Bairro: Centro <br> CEP: 89201-340 <br> Joinville/SC </p>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <span class="info-title">Atendimento</span>
+                    <p>8h30 às 18h <br> Horário de Brasília <br> De segunda a sexta-feira <br> Exceto feriados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

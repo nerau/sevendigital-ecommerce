@@ -1,0 +1,703 @@
+.fbits-categoria {
+	> img {
+		display: none;
+	}
+}
+
+.listagem-produtos {
+
+	> .mid-hero {
+		display: none;
+	}
+
+	.mid-hero {
+		flex: 100%;
+		margin-bottom: 2em;
+		padding-right: $grid-gutter-width/2;
+		padding-left: $grid-gutter-width/2;
+		width: 100%;
+
+		.hero-desktop, .hero-mobile {
+			width: 100%;
+		}
+	}
+
+	.fbits-ordenar-por {
+		color: $black;
+		text-transform: none;
+	}
+
+	.fbits-ordenar select {
+		@extend select.blue;
+	}
+
+	.qtd-resultado {
+		font-size: 0;
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 20px;
+		}
+
+		.fbits-qtd-produtos-pagina {
+			color: $gray-mid-light;
+			font-size: 14px;
+			font-family: $font-family-alternative;
+			font-weight: bold;
+
+			&:after {
+				content: "Resultados encontrados";
+				color: $black;
+				font-weight: normal;
+				margin-left: .5em;
+			}
+		}
+	}
+
+	.hero-listagem {
+		position: relative;
+
+		.hero-items-wrapper {
+			margin-right: calc((-100vw + 1230px - 20px)/ 2);
+			margin-left: -$grid-gutter-width/2;
+
+			@include media-breakpoint-down(lg) {
+				margin-right: 0;
+				margin-left: 0;
+			}
+		}
+
+		.slick-controls {
+			@extend .slick-controls.heros;
+			pointer-events: none;
+			width: 100%;
+
+			@include media-breakpoint-down(lg) {
+				width: 95%;
+			}
+
+			.slick-dots, .slick-arrow {
+				pointer-events: all;
+			}
+		}
+	}
+
+	.nav-suggestion {
+		margin-top: -3.5em;
+
+		@include media-breakpoint-down(lg) {
+			margin-top: 2em;
+		}
+
+		.title {
+			padding-left: 0;
+		}
+
+		img {
+			@include media-breakpoint-down(lg) {
+				height: 40px;
+				width: 40px;
+			}
+		}
+	}
+
+	.fbits-lateral-categoria{
+		// opacity: 0;
+		padding-top: 2em;
+		transition: opacity .3s ease;
+		position: relative;
+
+		&:before {
+			background-color: $gray-light;
+			content: "";
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100vw;
+			z-index: -1;
+		}
+
+		&.is-loaded {
+			opacity: 1;
+		}
+
+		@media (max-width: 992px) {
+			margin: 0 !important; 
+			padding: 0 !important;
+		}
+
+		.fbits-filtro-filho-item {
+			height: 0;
+			transition: .3s ease-in-out;
+		}
+
+		.fbits-lista-filtro-filho.Tamanhos {
+			>li {
+				display: inline-flex !important;				
+			}
+
+			.fbits-filtro-quantidade {
+				display: none;
+			}
+
+			label {
+				margin-left: 0;
+			}
+
+			label>span {
+				background-color: #F7F7F7;
+			    border: 2px solid #DEDEE9!important;
+			    font-weight: 700;
+				align-items: center;
+		        color: #000;
+		        display: inline-flex;
+		        height: 30px;
+		        justify-content: center;
+		        min-width: unset;
+		        width: 30px;
+		        margin-right: 5px;
+		        margin-left: 5px;
+
+		        &.disabled {
+		            opacity: .1;
+		        }
+
+		        &.selected:not(.disabled) {
+		            background-color: $gray-mid !important;
+		            color: #fff;
+		        }
+
+		        &:hover:not(.selected):not(.disabled) {
+		            background-color: rgba(0, 0, 0, 0.25) !important;
+		        }
+			}
+		}
+
+		>.fbits-section-categoria>.filtro-lateral-categoria {
+			@include media-breakpoint-up(lg) {
+				transform: unset !important;
+			}
+
+			&:not(.is-fixed) {
+				transform: unset !important;
+			}
+
+			&.is-fixed {
+
+				@at-root .is-scrolled-down#{&} {
+					top: 0;
+				}
+
+
+				@include media-breakpoint-down(md) {
+					background-color: #fff;
+					border-bottom: 1px solid $gray-mid-light;
+					left: 0;
+					position: fixed;
+					top: 73px;
+					transition: .3s ease;
+					z-index: 3;
+
+					.filtro-lateral-categoria>ul {
+						padding-left: $grid-gutter-width;
+						padding-right: $grid-gutter-width;
+					}
+
+					.filtro-title {
+						padding: 1em $grid-gutter-width;
+						max-width: 100%;
+					}
+
+					.fbits-ordenar-por {
+						display: none;
+					}
+
+					>ul {
+						display: none;
+						max-height: 70vh;
+						padding-left: $grid-gutter-width;
+						padding-top: $grid-gutter-width;
+						padding-right: $grid-gutter-width;
+						overflow: auto !important;
+					}
+				}				
+
+			}
+		}
+
+		.filtro-lateral-categoria {
+			border: none;
+			margin-top: 0;
+			
+			@media (max-width: 992px) {
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+		}
+
+		input[type="checkbox"] {
+			display: none;
+		}
+		
+		.filtro-title {
+			color: $black;
+			display: flex;
+			font-size: 16px;
+			font-weight: bold;
+			justify-content: space-between;
+			padding: 1.5em 15px;
+			text-align: center;
+			text-transform: uppercase;
+			transition: .4s ease-in-out, padding 0s;
+
+			@include media-breakpoint-down(md) {
+				padding: .75em 15px;
+			}
+			
+			@media (min-width: 992px) {
+				display: none;
+			}
+
+			&:after {
+				content: "\f078";
+				font-family: "Font Awesome 5 Pro";
+				font-weight: 100;
+				-webkit-transition: .4s ease-in-out;
+				transition: .4s ease-in-out;
+			}
+
+			&.is-active{
+				&:after {
+					transform: rotate(180deg);
+				}
+			}
+
+		}
+
+		.filtroRange.filtroPai {
+			display: none;
+			margin-bottom: 2em;
+			padding: 0;
+			position: relative;
+			z-index: 0;
+
+			.rangeBox {
+				padding: 0;
+			}
+
+			#slider-precoPor a{
+				border-color: #BEBEBE;
+				height: 14px;
+				margin-left: 0 !important;
+				top: -6px;
+				width: 14px;
+
+				&:last-child {
+					transform: translateX(-100%);
+				}
+			}
+		}
+
+
+
+		.fbits-filtro-titulo-pai, .tituloPai {
+			color: $blue-mid;
+			cursor: auto;
+			display: flex;
+			font-family: $font-family-alternative;
+			font-size: 16px;
+			font-weight: bold;
+			justify-content: space-between;
+			line-height: 1.4;
+			letter-spacing: .2px;
+			margin-bottom: 0.75em;
+			text-transform: capitalize;
+
+			@media (min-width: 1300px) {
+				display: block;
+				font-size: 16px; 
+			}
+
+			@include media-breakpoint-down(md) {
+				margin: .75em 0;
+			}
+
+
+			&:after {
+				content: "\f078";
+			    font-family: "Font Awesome 5 Pro";
+			    font-weight: 100;
+			    -webkit-transition: .4s ease-in-out;
+			    transition: .4s ease-in-out;
+
+				@media (min-width: 1300px) {
+					display: none;
+				}
+			}
+		}
+
+
+		.fbits-filtro-pai {
+			border: none;
+			border-bottom: 1px solid $gray-mid-light;
+			padding-left: 1em;
+			transition: .4s ease-in-out;
+
+			@media (min-width: 992px) {
+				margin-bottom: .5em;
+				padding-bottom: .5em;
+			}
+
+			.fbits-filtro-ver-mais {
+				margin-top: 1.5em !important;
+				text-align: left;
+
+				@include media-breakpoint-down(md) {
+				    margin-bottom: .75em !important;
+				}
+			}
+
+			&.is-active {
+				@media (max-width: 1300) {
+					border-color: $gray-mid-light;
+				}
+
+				.fbits-filtro-titulo-pai:after {
+					transform: rotate(180deg);
+				}
+			}
+
+			>ul>li {
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.liCores.checked {
+			background: unset !important;
+		}
+
+		.fbits-filtro-label-item, .filtros-selecionados label.item {
+			color: $body-color;
+			cursor: pointer;
+			font-family: $font-family-alternative;
+			font-size: 16px;
+			letter-spacing: .4px;
+			margin-bottom: .25em;
+			transition: .3s ease-in-out;
+			text-transform: capitalize;
+
+			&.checked {
+				color: $brand-orange;
+			}
+
+			&:hover {
+				color: $gray-mid;
+			}
+		}
+
+		.Faixas-de-Preço, ul.Marcas {
+			input {
+				visibility: hidden;
+			}
+		}
+
+		ul.filtroFilho li.componente-filtro, ul.fbits-lista-filtro-filho li.componente-filtro {
+			display: flex;
+			height: auto;
+			text-transform: uppercase;
+
+			@media (max-width: 1300px) {
+				margin-bottom: .75em;
+			}
+		}
+
+		input {
+			color: #000;
+			flex-shrink: 1;
+			font-family: $font-family-alternative;
+			font-style: 12px;
+			height: 24px;
+			width: 100%;
+		}
+
+		.fbits-filtro-quantidade {
+			color: $gray-mid;
+			display: none;
+		}
+		
+		.ver-todos, .ver-menos {
+			color: $gray-mid-light !important;
+			text-transform: uppercase;
+		}
+
+		.li.filtroPai, li.fbits-filtroSelecionados-pai, li.fbits-filtro-pai {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		//O código abaixo é uma correção para um bug no filtro de cor da Tray na pagina de busca. Use-o em conjunto com o script que vincula o input com o label para permitir a seleção da cor através do clique na mesma
+		
+		.fbits-lista-filtro-filho {
+			padding: 0;
+			position: relative;
+
+			.componente-filtro {
+				display: flex;
+			}
+		}
+
+		.liCores {
+			display: inline !important;
+			height: 20px !important;
+			width: 20px !important;
+			margin: 0 .5em .5em 0 !important;
+
+			input[type="checkbox"].checkboxCor {
+				display: none !important;
+			}
+
+			label {
+				display: inline-block;
+				height: 20px;
+				margin: 0;
+				width: 20px;
+			}
+
+			.fbits-filtro-label-item {
+				border: 1px solid $gray-mid-light;
+			}
+		}
+		//Aqui termina a correção
+	}
+
+	.options-bar {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
+	}
+
+	.bread {
+		border: none;
+		padding: 0;
+	}
+
+	section.fbits-section-categoria {
+		float: none;
+		width: auto;
+
+		.fbits-ordenar * {
+			position: relative !important;
+		}
+
+		.ordenar {
+			width: auto;
+		}
+
+		.customSelect {
+			display: none !important;
+		}
+
+		* {
+			float: none;
+			// position: relative !important;
+		}
+	}
+
+	.category-excerpt-wrapper {
+		border-top: 1px solid $gray-mid-light;
+		font-size: 16px;
+		margin-top: 2em;
+		padding-top: 2em;
+		padding-bottom: 2em;
+
+		&:not(.has-content) {
+			display: none;
+		}
+
+		b, strong {
+			color :$brand-orange;
+		}
+
+		a {
+			color: $brand-orange;
+			text-decoration: underline;
+			transition: .2s ease;
+
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+
+	.fbits-mainBar {
+		margin-bottom: 3em;
+	}
+
+	.filtros-selecionados {
+		.fbits-componente-filtros-selecionados {
+			border-bottom: 1px solid #ddd;
+			margin-bottom: 1.5em;
+			padding-right: $grid-gutter-width/2;
+			padding-left: $grid-gutter-width/2;
+			padding-bottom: 1.5em;
+
+			>ul {
+				margin: 0;
+			}
+		}
+
+		.fbits-componente-filtro-filho.Tamanhos {
+			label>span {
+				background-color: #F7F7F7;
+			    border: 2px solid #DEDEE9!important;
+			    font-weight: 700;
+				align-items: center;
+		        color: #000;
+		        display: inline-flex;
+		        height: 30px;
+		        justify-content: center;
+		        min-width: unset;
+		        width: 30px;
+		        margin-right: 5px;
+		        margin-left: 5px;
+
+		        &.disabled {
+		            opacity: .1;
+		        }
+
+		        &.selected:not(.disabled) {
+		            background-color: $brand-orange !important;
+		            color: #fff;
+		        }
+
+		        &:hover:not(.selected):not(.disabled) {
+		            background-color: rgba(0, 0, 0, 0.25) !important;
+		        }
+			}
+		}
+
+		.fbits-componente-filtros-selecionados-titulo {
+		    color: $gray-mid;
+		    font-family: $font-family-base;
+		    font-size: 18px;
+		    font-weight: normal;
+		    margin-bottom: 1em;
+		    text-transform: none;
+
+		    @media (max-width: 1300px) {
+		    	font-size: 16px;
+		    	margin-bottom: 2em;
+		    	margin-top: 2em; 
+		    }
+
+		    @media (max-width: 992px) {
+		    	padding: 0 15px;
+		    }
+		}
+
+		.qtde {
+			display: none;
+		}
+
+		.fbits-filtro-limpar {
+			background-color: $brand-orange;
+			color: #fff !important;
+			font-size: 14px !important;
+			font-weight: bold;
+			height: auto;
+			margin: 0;
+			padding: .75em .5em;
+			text-transform: none;
+			width: 100% !important;
+		}
+
+		.fbits-componente-filtro-selecionados-filho-range {
+			> span {
+				margin-left: .75em;
+				margin-bottom: .25em;
+			}
+
+			+ li {
+				margin-top: 1.5em;
+			}
+		}
+
+
+		.fbits-componente-filtro-selecionados-remover, .fbits-filtroSelecionados-remover {
+			font-size: 0;
+			margin-right: .25em;
+
+			&:before {
+				content: "\f00d";
+				font-family: "Font Awesome 5 Pro";
+				font-size: 16px;
+				color: #d32f2f;
+				width: 16px;
+				display: inline-flex;
+				transition: .4s ease-in-out;
+				justify-content: center;
+			}
+
+			&:hover:before {
+				transform: rotate(180deg);
+			}
+		}
+
+		.fbits-componente-filtro-selecionados-pai {
+			margin-bottom: 1.5em;
+
+			@media (max-width: 992px) {
+				padding: 0 15px;
+			}
+			
+			>ul {
+				@media (max-width: 1000px) { 
+					display: none;
+				}
+			}
+
+			&.is-active {
+				.tituloPai:after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		.tituloPai {
+			color: $blue-mid;
+			cursor: auto;
+			display: flex;
+			font-family: $font-family-base;
+			font-size: 16px;
+			font-weight: normal;
+			justify-content: space-between;
+			margin-bottom: 0.5em;
+			text-transform: none;
+
+			@media (min-width: 1300px) {
+				display: block;
+				font-size: 16px; 
+			}
+
+
+			&:after {
+				content: "\f078";
+			    font-family: "Font Awesome 5 Pro";
+			    font-weight: 100;
+			    -webkit-transition: .4s ease-in-out;
+			    transition: .4s ease-in-out;
+
+				@media (min-width: 1300px) {
+					display: none;
+
+				}
+			}
+		}
+	}
+}

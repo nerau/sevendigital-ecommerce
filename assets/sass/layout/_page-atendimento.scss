@@ -1,0 +1,327 @@
+.page-atendimento {
+	font-size: 16px;
+
+	.section-title {
+		padding-left: 1em;
+	}
+
+	.hero-institucional {
+		align-items: center;
+		background-position: center;
+		background-size: cover;
+		display: flex;
+		margin-bottom: 2em;
+		min-height: 300px;
+		will-change: transform;
+
+		@include media-breakpoint-down(sm) {
+			min-height: 200px;
+		}
+
+		.hero-title {
+			color: #fff;
+			font-size: 70px;
+			font-weight: bold;
+
+			@include media-breakpoint-down(sm) {
+				font-size: 42px;
+			}
+
+			@include media-breakpoint-down(xs) {
+				font-size: 36px;
+			}
+ 		}
+	}
+
+	.infos-blocks {
+
+		.block-col {
+			display: block;
+			margin-bottom: $grid-gutter-width;
+		}
+
+		.content-wrapper {
+			align-items: center;
+			border: 1px solid $blue-mid;
+			display: flex;
+			height: 100%;
+			flex-wrap: wrap;
+			padding: $grid-gutter-width 40px;
+
+			@include media-breakpoint-down(md) {
+				> * {
+					flex: 100% !important;
+					margin-top: 2em;
+					width: 100%;
+				}
+			}
+
+			> * {
+				flex: 1;
+			}
+		}
+
+		.info-title {
+			color: $blue-mid;
+			font-size: 36px;
+			margin-bottom: 1em;
+		}
+
+		.wrapper:first-child {
+			align-self: flex-start;
+			margin-top: 0;
+		}
+
+		.basic-text {
+			margin-bottom: 0;
+		}
+
+		span.phone {
+			color: #000;
+			display: block;
+			font-size: 21px;
+
+			&:first-child {
+				margin-bottom: .5em;
+			}
+		}
+
+		.custom-btn {
+			&.chat {
+				&:before {
+					content: "\f075";
+					font-family: "Font Awesome 5 Pro";
+					font-weight: bold;
+					margin-right: .5em;
+				}
+			}
+
+			&.email {
+				&:before {
+					content: "\f0e0";
+					font-family: "Font Awesome 5 Pro";
+					font-weight: bold;
+					margin-right: .5em;
+				}
+			}
+		}
+
+		.whatsapp-block {
+			.content-wrapper {
+				border-color: $green;
+			}
+
+			.info-title {
+				color: $green;
+			}
+			
+			.custom-btn {
+				&:before {
+					content: "\f232";
+					font-family: "Font Awesome 5 Brands";
+					margin-right: .5em;
+				}
+			}
+		}
+	}
+
+	.faq-section {
+		padding-top: 3em;
+		padding-bottom: 3em;
+
+		.content-wrapper {
+			@extend .row;
+		}
+
+		.content-list-wrapper {
+			width: 100%;
+		}
+
+		.content-list {
+			margin-bottom: 3em;
+
+			@include media-breakpoint-down(md) {
+				margin-top: 2em;
+			}
+
+			a {
+				color: $blue-mid;
+			}
+		}
+
+		.empty-content {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			user-select: none;
+
+			@include media-breakpoint-down(md) {
+				margin-top: 2em;
+			}
+
+			.wrapper {
+				background-image: url(https://recursos.sevendigital.com.br/i/chat-icon-big.svg);
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				padding: 7em 11em 11em 11em;
+
+				@include media-breakpoint-down(lg) {
+					padding-right: 7em;
+					padding-left: 7em;
+				}
+
+				@include media-breakpoint-down(xs) {
+					padding-right: 5em;
+					padding-left: 5em;	
+					width: 100%;
+				}
+
+				@media (max-width: 400px) {
+					padding-right: 3em;
+					padding-left: 3em;
+					padding-top: 3em;
+					padding-bottom: 6em;
+				}
+
+				p {
+					color: $gray-mid;
+					font-size: 28px;
+					line-height: 1.3;
+
+					@include media-breakpoint-down(sm) {
+						font-size: 21px;
+						text-align: center;
+					}
+
+					@include media-breakpoint-down(xs) {
+						font-size: 16px;
+					}
+
+					@media (max-width: 400px) {
+						font-size: 14px;
+
+					}
+				}
+			}
+		}
+
+
+
+		.custom-btn {
+
+			&.chat {
+				&:before {
+					content: "\f075";
+					font-family: "Font Awesome 5 Pro";
+					font-weight: bold;
+					margin-right: .5em;
+				}
+			}
+		}
+
+		.tabs-col {
+			// align-items: center;
+			display: flex;
+			flex-direction: column;
+
+			ul {
+				position: sticky;
+				top: 350px;
+				transform: unset;
+				width: 100%;
+
+				@at-root .is-scrolled-down#{&} {
+					top: 250px;
+				}
+
+				@include media-breakpoint-down(md) {
+					top: 150px;
+				}
+
+				li {
+					width: 100%;
+				}
+			}
+
+			a {
+				align-items: center;
+				border: 1px solid transparent;
+				color: #000;
+				display: flex;
+				font-size: 16px;
+				justify-content: space-between;
+				padding: 1em 2em;
+				position: relative;
+				transition: .2s ease;
+
+
+				&:hover {
+					opacity: .5;
+				}
+
+				&.is-active {
+					border-color: $brand-orange;
+					color: $brand-orange;
+
+					&:after {
+						color: $brand-orange;
+					}
+
+					&:before {
+						border-color: $brand-orange;
+					}
+				}
+
+				// &:before {
+				// 	border: 1px solid transparent;
+				// 	content: "";
+				// 	height: 100%;
+				// 	left: 50%;
+				// 	transform: translateX(-50%);
+				// 	position: absolute;
+				// 	width: 120%;
+				// }
+
+				&:after {
+					color: $blue-mid;
+					content: "\f054";
+					font-size: 14px;
+					font-weight: bold;
+					font-family: "Font Awesome 5 Pro";
+					margin-left: .5em;
+				}
+			}
+		}
+
+		.content-item-wrapper {
+			h1, h2, h3, h4, h5, h6 {
+				font-size: 21px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.map-section {
+		#mapa {
+			min-height: 450px;
+			margin-bottom: 3em;
+		}
+
+		.infos {
+			margin-bottom: 3em;
+		}
+
+		.info-title {
+			color: $blue-mid;
+			display: block;
+			font-weight: bold;
+			font-size: 21px;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+
+// TESTAR COM MAIS DE UM CONTEUDO

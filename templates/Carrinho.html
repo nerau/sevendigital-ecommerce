@@ -1,0 +1,63 @@
+<FBITS:Cabecalho />
+
+<div class="container tyc_container">
+   <div class="row">
+      <div class="full-container">
+         <FBITS:CarrinhoVazio />
+         <section class="fbits-responsive-carrinho">
+            <!-- PRODUTOS -->
+            <div class="fbits-responsive-carrinho-items col-lg-7 col-md-8 col-sm-12 col-xs-12">
+               <!-- COMPONENTE HEADER TABELA PRODUTOS-->
+               <ul class="fbits-responsive-carrinho-header hidden-sm hidden-xs">
+                  <li class="col-lg-6 col-md-6 col-sm-10 col-xs-10 fbits-responsive-carrinho-header-coluna-descricao">Descrição do produto</li>
+                  <li class="col-lg-2 col-md-2 col-sm-4 col-xs-4 text-center fbits-responsive-carrinho-header-coluna-quantidade">Quantidade</li>
+                  <li class="col-lg-2 col-md-2 col-sm-4 col-xs-4 text-center fbits-responsive-carrinho-header-coluna-preco">Preço unitário</li>
+                  <li class="col-lg-2 col-md-2 col-sm-4 col-xs-4 text-right fbits-responsive-carrinho-header-coluna-total">Total</li>
+               </ul>
+               
+               <!-- COMPONENTE LISTA DE PRODUTOS -->
+               <FBITS:Produtos />
+               <FBITS:CarrinhoMensagens />
+               
+            </div>
+            <!-- DETALHES COMPLEMENTARES -->
+            <div class="fbits-responsive-carrinho-detalhes col-lg-5 col-md-4 col-sm-12 col-xs-12">
+               <!-- COMPONENTE SUBTOTAL -->
+               <div class="fbits-responsive-carrinho-subtotal">
+                  <span class="text-left col-lg-6 col-md-6 col-sm-6 col-xs-6 fbits-responsive-carrinho-subtotal-header">Subtotal</span>
+                  <span class="text-right col-lg-6 col-md-6 col-sm-6 col-xs-6 fbits-responsive-carrinho-subtotal-valor">
+                      <span class="currency"><FBITS:Subtotal /></span>
+                  </span>
+               </div>
+               <!-- COMPONENTE FRETE COM OS CAMPOS -->
+               <FBITS:Frete />
+               <!-- COMPONENTE TOTAL -->
+               <div class="fbits-responsive-carrinho-total">
+                  <div class="text-left col-lg-6 col-md-6 col-sm-6 col-xs-6 fbits-responsive-carrinho-total-header">
+                     Total
+                  </div>
+                  <FBITS:Parcelamento />
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right fbits-responsive-carrinho-total-valor">
+                      <span class="currency"><FBITS:Total /></span>
+                  </div>
+               </div>
+               <!-- BOTOES BOTTOM -->
+               <div class="botoes-bottom">
+                  <!-- COMPONENTE FINALIZAR -->
+                  <div class="container-finalizar">
+                     <FBITS:Finalizar />
+                  </div>
+                  <!-- COMPONENTE CONTINUAR -->
+                  <div class="container-continuar">
+                     <a href="#" class="block-a">
+                     </a>
+                     <FBITS:Continuar />
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+   </div>
+</div>
+
+<FBITS:Rodape />

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* LEIA-ME */
+/* login.css >> DefiniÃ§Ãµes das pÃ¡ginas de LOGIN do novo Checkout */
+/* minhaconta.css >> DefiniÃ§Ãµes das pÃ¡ginas de MINHA CONTA do novo Checkout */
+/* checkout.css >> DefiniÃ§Ãµes das pÃ¡ginas de CARRINHO, FECHAMENTO E CONFIRMAÃ‡ÃƒO do novo Checkout */
+/* geral.css >> DefiniÃ§Ãµes de CabeÃ§alho e RodapÃ© */
+/* adicione/edite este arquivo para sobrescrever as definiÃ§Ãµes padrÃ£o da loja */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #ffcd28;
+            box-shadow: 0 0 0 0 #ffcd28; }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 205, 40, 0);
+            box-shadow: 0 0 0 10px rgba(255, 205, 40, 0); } }
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #ffcd28;
+            box-shadow: 0 0 0 0 #ffcd28; }
+  100% {
+    -webkit-box-shadow: 0 0 0 10px rgba(255, 205, 40, 0);
+            box-shadow: 0 0 0 10px rgba(255, 205, 40, 0); } }
+
+body.fbits-confirmacao {
+  padding: 0; }

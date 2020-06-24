@@ -1,0 +1,61 @@
+<FBITS:Cabecalho />
+
+<div class="container tyc_container">
+
+    <div class="row">
+
+        <div class="full-container">
+            
+            <section class="fbits-nc-carrinho new-checkout">
+            
+                <div class="col-xs-12"> 
+                    <div class="tyc-mensagem alert alert-error" style="display:none;"></div>
+                </div>
+
+                <div class="col-lg-7">
+                    
+                    <FBITS:Usuario />
+                    
+                    <FBITS:Endereco />
+                    
+                    <FBITS:Frete ordenacao="" />
+
+                    <FBITS:Observacao titulo="Observação" subtitulo="Preencha o campo abaixo para adicionar uma observação ao seu pedido" placeholder="Adicione uma observação ao seu pedido" />
+                    
+                    <FBITS:Cupom />
+                    
+                    <FBITS:ContaCorrente />
+                    
+                    <FBITS:Pagamento />
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div class="finalizacao-wrapper">
+                        <div class="fbits-produtos-container">
+                            <h5 class="title-box"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Resumo do Pedido</h5>
+                            
+                            <FBITS:CarrinhoMensagens />
+
+                            <FBITS:Produtos />
+                        
+                            <FBITS:Resumo />
+                            
+                        </div>
+
+                        <FBITS:Finalizar />
+                    </div>
+                    
+                    
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+    
+</div>
+
+<FBITS:Rodape />
+
+
