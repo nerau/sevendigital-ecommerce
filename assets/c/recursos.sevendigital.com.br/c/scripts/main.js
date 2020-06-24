@@ -350,7 +350,6 @@ var pageProduto = {
 		//Ajusta posição forma de pagamento
 		$('.detalhe-produto .fbits-forma-pagamento').after($('.detalhe-produto .col-lg-5 > .formas-pagamento-wrapper'));
 
-
 		//Carrega imagens
 		getImages($('#hdnProdutoVarianteId').val(), $('.page-produto .main-image'), $('.page-produto .thumbnails'))
 		function getImages(variantId, appendMainImagesTo, appendThumbsTo){
