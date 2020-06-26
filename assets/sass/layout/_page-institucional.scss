@@ -2,4 +2,8 @@
 	.fbits-conteudo-item {
 		margin-bottom: 2em;
 	}
+
+	.hero-institucional:not(.is-processed) {
+		display: none;
+	}
 }

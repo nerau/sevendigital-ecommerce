@@ -12,6 +12,7 @@
 
             heroRef.attr('style', `background-image: url(${image});`);
             heroRef.find('.hero-content').append(titleTemplate);
+            heroRef.addClass('is-processed');
         }
 
 
@@ -21,9 +22,8 @@
 
 <div class="page-atendimento page-institucional">
 
-    <section class="hero-institucional" style="background-image: url(https://recursos.sevendigital.com.br/i/hero-atendimento.jpg);">        
-        <div class="hero-content container">
-        </div>
+    <section class="hero-institucional">        
+        <div class="hero-content container"></div>
     </section>
 
     <section class="container">

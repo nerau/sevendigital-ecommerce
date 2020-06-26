@@ -16686,6 +16686,9 @@ button.close {
 #html-root .page-institucional .fbits-conteudo-item {
   margin-bottom: 2em; }
 
+#html-root .page-institucional .hero-institucional:not(.is-processed) {
+  display: none; }
+
 #html-root .fbits-geral .listadesejos {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
