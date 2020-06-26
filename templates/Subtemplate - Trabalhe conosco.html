@@ -1,0 +1,86 @@
+<script>
+    $(function(){
+        // Ajusta hero
+        const pageRef = $('.page-institucional'),
+            heroRef = pageRef.find('.hero-institucional'),
+            heroJsRef = pageRef.find('heroatendimento');
+
+        if (heroJsRef.length) {
+            let title = heroJsRef.attr('titulo'),
+                image = heroJsRef.attr('background'),
+                titleTemplate = `<h2 class="hero-title">${title}</h2>`;
+
+            heroRef.attr('style', `background-image: url(${image});`);
+            heroRef.find('.hero-content').append(titleTemplate);
+        }
+
+        $("#EnviaFormulario").submit(function(){
+
+           if($('input[type="file"]').get(0) != undefined){
+
+
+               var extensoesPermitidas = ["zip", "rar", "doc", "docx", "txt", "jpg", "jpeg", "png", "pdf", "xls", "xlsx", "csv"];
+
+               var nomeArquivo = ($('input[type="file"]').get(0)).value;
+
+               var extensaoArquivo = nomeArquivo.split('.').pop();
+
+
+               if($('input[type="file"]').get(0).files["0"].size > 4194304){
+
+                   alert("Tamanho do arquivo excedido!");
+
+                   return false;
+
+               }
+
+
+               if(!extensoesPermitidas.includes(extensaoArquivo)){
+
+                   alert("Não é permitido enviar arquivos no formato '." + extensaoArquivo + "'!");
+
+                   return false;
+
+               }
+
+           }
+
+        });
+    })
+</script>
+
+<div class="page-atendimento page-institucional page-trabalhe-conosco">
+
+    <section class="hero-institucional" style="background-image: url(https://recursos.sevendigital.com.br/i/hero-atendimento.jpg);">        
+        <div class="hero-content container">
+        </div>
+    </section>
+
+    <section class="container">
+        <FBITS:Conteudo filtroPosicao="centro" idsConteudos="" tipo="estatico" configuracaoCarrossel="{}" classeItens="" />
+    </section>
+    <section class="form-section container">
+        <form action="/Estaticas/EnviaFormularioGenerico"  enctype="multipart/form-data" id="EnviaFormulario" method="post">
+            <div class="row">
+                <div class="form-group col">
+                    <input name="nome" placeholder="Nome *" type="text" required>
+                </div>
+                <div class="form-group col-lg-6">
+                    <input name="email" placeholder="Email *" type="email" required>
+                </div>
+                <div class="form-group col-lg-6">
+                    <input name="telefone" placeholder="Telefone" type="text" maxlength="9">
+                </div>
+                <div class="form-group col">
+                    <textarea id="comentarios" name="comentarios" placeholder="Escreva aqui a sua mensagem"></textarea>
+                </div>
+                <div class="form-group col">
+                     <input accept=".zip, .rar, .doc, .docx, .png, .pdf" id="anexo" name="anexo" type="file" />
+                </div>
+                <div class="form-group col">
+                    <input name="Enviar" type="submit" value="Enviar" class="btn-enviar">
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
