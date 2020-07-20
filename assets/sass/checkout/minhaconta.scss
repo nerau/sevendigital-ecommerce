@@ -35,54 +35,54 @@
 }
 
 input[type=text], input[type=email], input[type=date], input[type=password], input[type=number], input[type=tel] {
-	color: $body-color !important;
-	font-family: $font-family-base !important;
+    color: $body-color !important;
+    font-family: $font-family-base !important;
 }
 
 .switch-field input:checked+label {
-	background-color: $brand-orange !important;
-	color: #fff !important;
+    background-color: $brand-orange !important;
+    color: #fff !important;
 }
 
 input[type=submit] {
-	background-color: $brand-orange !important;
-	border: none !important;
-	color: #fff !important;
-	font-family: $font-family-base !important;
-	transition: .3s ease-in-out;
-	text-transform: uppercase;
+    background-color: $brand-orange !important;
+    border: none !important;
+    color: #fff !important;
+    font-family: $font-family-base !important;
+    transition: .3s ease-in-out;
+    text-transform: uppercase;
 
-	&:hover {
-		background-color: lighten($brand-orange, 25%) !important;
-		opacity: 1 !important;
-	}
+    &:hover {
+        background-color: lighten($brand-orange, 25%) !important;
+        opacity: 1 !important;
+    }
 }
 
 .minhaconta .sideBar .filtroPai, .minhaconta .sideBar .filtros .title ,label {
-	font-family: $font-family-base !important;
+    font-family: $font-family-base !important;
 }
 
 .minhaconta .sideBar .filtros ul {
-	float: none;
+    float: none;
 }
 
 
 
 #menu-minha-conta .filtroPai {
-	margin-top: 2em;
+    margin-top: 2em;
 }
 
 .minhaconta .sideBar .filtros .title .icon {
-	@media (max-width: 992px) {
-		background: 0 0;
-		display: block;
-		outline: 0;
-		border: none;
-	}
+    @media (max-width: 992px) {
+        background: 0 0;
+        display: block;
+        outline: 0;
+        border: none;
+    }
 }
 
 .fbits-btn-show-password {
-	display: none !important;
+    display: none !important;
 }
 
 
@@ -99,7 +99,7 @@ input[type=submit] {
 }
 
 .fbits-box-login button.btn-success, .btn-primary{
-   	@extend .custom-btn, .btn-orange;
+    @extend .custom-btn, .btn-orange;
 }
 
 
@@ -167,7 +167,7 @@ input[type=submit] {
         width: 100%;
 
         &:hover, &:active {
-        	text-decoration: none;
+            text-decoration: none;
         }
     }
 
@@ -288,31 +288,31 @@ input[type=submit] {
 }
 
 .full-container {
-	margin: auto;
-	font-family: $font-family-alternative;
+    margin: auto;
+    font-family: $font-family-alternative;
 
-	.btn-success {
-		@extend .custom-btn, .btn-orange;
-		background-color: $brand-orange;
-		color: #fff;
-	}
+    .btn-success {
+        @extend .custom-btn, .btn-orange;
+        background-color: $brand-orange;
+        color: #fff;
+    }
 
-	.fbits-social-login {
-		display: flex;
-		flex-direction: column;
+    .fbits-social-login {
+        display: flex;
+        flex-direction: column;
 
-		> * {
-			flex: 1;
-			margin-bottom: 1em;
-			margin-right: 0;
-			margin-left: 0;
-			width: 100%;
+        > * {
+            flex: 1;
+            margin-bottom: 1em;
+            margin-right: 0;
+            margin-left: 0;
+            width: 100%;
 
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 
 }
 
